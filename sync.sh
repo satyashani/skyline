@@ -1,0 +1,1 @@
+aws s3 sync . s3://skylineenergysolar.in/ --profile shani --region ap-south-1 --exclude ".git/*" --exclude sync.sh
