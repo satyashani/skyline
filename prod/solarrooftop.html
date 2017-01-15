@@ -24,6 +24,8 @@
 
    <!-- script
    ================================================== -->
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 
@@ -34,61 +36,14 @@
 
 </head>
 
-<body id="top">
+<body id="top" ng-app="skyline">
 
-	<!-- header 
-   ================================================== -->
-   <header class="short-header">   
-
-   	<div class="gradient-block"></div>	
-
-   	<div class="row header-content">
-
-            <div class="logo">
-                <a href="index.html">Skyline Energy, Katni</a>
-            </div>
-
-            <nav id="main-nav-wrap">
-                <ul class="main-navigation sf-menu">
-                    <li><a href="index.html" title="">Home</a></li>									
-                    <li class="has-children current">
-                        <a href="#" title="">Products</a>
-                        <ul class="sub-menu">
-                            <li><a href="waterheater.html">Solar Water Heater</a></li>
-                            <li class='current'><a href="solarrooftop.html">Solar Rooftop</a></li>
-                         </ul>
-                    </li>
-                    <li><a href="contact.html" title="">Contact</a></li>										
-                </ul>
-            </nav> <!-- end main-nav-wrap -->  
-
-            <div class="search-wrap">
-
-                    <form role="search" method="get" class="search-form" action="#">
-                            <label>
-                                    <span class="hide-content">Search for:</span>
-                                    <input type="search" class="search-field" placeholder="Type Your Keywords" value="" name="s" title="Search for:" autocomplete="off">
-                            </label>
-                            <input type="submit" class="search-submit" value="Search">
-                    </form>
-
-                    <a href="#" id="close-search" class="close-btn">Close</a>
-
-            </div> <!-- end search wrap -->	
-
-            <div class="triggers">
-                    <a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
-                    <a class="menu-toggle" href="#"><span>Menu</span></a>
-            </div> <!-- end triggers -->	
-   		
-   	</div>     		
-   	
-   </header> <!-- end header -->
-
+    <div ng-include="'header.html'"></div>
+    
     <div id="content-wrap" class="styles">
    	<div class="row narrow add-bottom text-center">
             <div class="col-twelve tab-full">
-                <h1>Solar Rooftop Solutions</h1>
+                <h1>Solar System Rooftop Solutions</h1>
                 <p class="lead">Solar rooftop solutions is available for all range of customers. Small Shop, home, farm house, 
                 large building, showroom, petrol pump, factory, mines, government institution etc. for each there is a solar
                 rooftop solutions.</p>   			
@@ -97,9 +52,9 @@
 
      	<div class="row">
             <div class="col-twelve tab-full">
-                <h3>Home Solar</h3>
+                <h3>Rooftop Solar System</h3>
                 <p>
-                    This is our list of home solar products.
+                    This is our list of solar system products.
                 </p>
                 <table>
                     <thead>
@@ -140,43 +95,7 @@
    
    <!-- footer
    ================================================== -->
-   <footer>
-
-   	<div class="footer-main">
-
-   		<div class="row">  
-
-	      	<div class="col-twelve tab-full mob-full footer-info">            
-
-	            <h4>Contact</h4>
-                    <div class="col-four tab-full">
-                            <h4>Address</h4>
-                            <p>
-                                First Floor, Sahu Plaza<br>
-                                Garg Chauraha, Katni<br>
-                            </p>
-                    </div>
-                    <div class="col-four tab-full">
-                        <h4>Contact - 1 </h4>
-                        <p>
-                            Satyaveer<br>
-                            satyaveerm1@gmail.com <br>
-                            +91 83491 31054
-                        </p>
-                    </div>
-                    <div class="col-four tab-full">
-                        <h4>Contact -2 </h4>
-                        <p>
-                            Shani<br>
-                            +91 94794 67469
-                        </p>
-                    </div>
-	               
-                </div> <!-- end footer-info -->
-	      </div> <!-- end row -->
-
-   	</div> <!-- end footer-main -->
-   </footer>  
+    <div ng-include="'footer.html'" ></div>
 
    <div id="preloader"> 
     	<div id="loader"></div>

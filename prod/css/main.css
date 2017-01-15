@@ -1582,9 +1582,6 @@ header a {
  * header logo - (_layout.css) 
  * ------------------------------------------------------------------- */
 header .logo {
-	position: absolute;
-	left: 35px;
-	top: 6px;
 	z-index: 601;
 }
 
@@ -1744,6 +1741,9 @@ header .logo a {
 	z-index: 500;
 	display: none;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+.main-navigation:hover ul {
+	display: block;
 }
 
 .main-navigation ul ul {
