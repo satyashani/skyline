@@ -1,0 +1,10 @@
+{
+    "pg" : {
+        "pghost": "localhost",
+        "pgport": "5432",
+        "pgrole": "xadmin",
+        "pgdb": "postgres",
+        "pgpass": "rewq12",
+        "pgschema": "skyline"
+    }
+}

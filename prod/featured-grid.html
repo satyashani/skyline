@@ -1,0 +1,20 @@
+<div class="entry-content">
+    <div id="featured-post-slider" class="flexslider">
+        <ul class="slides">
+            <li ng-repeat="d in data">
+                <div class="featured-post-slide">
+                    <div class="post-background" style="background-image:url('{{ d.bgimage }}');"></div>
+                    <div class="overlay"></div>			   		
+                    <div class="post-content" style="font-weight: bold;">
+                        <ul class="entry-meta">
+                            <li ng-repeat="s in d.smalltexts">{{ s }}</li> 
+                        </ul>	
+                        <h1 class="slide-title">
+                            <a href="{{ d.link }}" title="">{{ d.text }}</a>
+                        </h1> 
+                    </div>	  
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 Sep, 2017, 5:23:24 PM
+    Author     : shani
+*/
+
+.sk-header{
+    padding : 10px;
+    border-width: 0px 0px 1px 0px; border-color: orange; border-radius: 0px 0px 5px 5px;
+}
+
+.sk-header .inline{
+    float:left;
+}
+
+.sk-logo{
+    padding: 10px;
+}
+
+.sk-title{
+    font-size: 30px;font-weight: bold; font-family: Comic Sans;
+    font-style: italic;margin-top: 3px;
+    border-bottom: 3px solid orange; border-radius: 0px 0px 2px 0px;
+}
+
+.sk-phone{
+    font-size: 18px;font-weight: bold; font-family: Comic Sans;
+    font-style: italic;margin-top: 18px; float: right;
+}
+
+.sk-search{
+    padding: 15px 0px 0px 30px;
+}

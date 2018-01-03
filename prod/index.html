@@ -7,8 +7,8 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Skyline Energy : Solar Power, Solar Pump, Solar Water Heater, Grid Tie, Off-grid, Jabalpur, Katni, Rewa, Satna, Shahdol, Madhya Pradesh, MP</title>
-	<meta name="description" content="Skyline Energy : Solar Power, Solar Rooftop, Solar Water Heater, Jabalpur, Katni, Rewa, Satna, Shahdol, Madhya Pradesh, MP">  
+	<title>Skyline Energy : Solar Energy Products For Everyone</title>
+	<meta name="description" content="Skyline Energy, Solar Power, Solar Rooftop, Solar Water Heater, Solar System, Solar System in MP, Solar System in Jabalpur">  
 	<meta name="author" content="Skyline Energy">
 
    <!-- mobile specific metas
@@ -25,7 +25,6 @@
    <!-- script
    ================================================== -->
 	<script src="js/angular.min.js"></script>
-	<script src="js/app.js"></script>
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 
@@ -50,65 +49,11 @@
             <div class="bricks-wrapper">
 
                 <div class="grid-sizer"></div>
-
-                <div class="brick entry featured-grid animate-this">
-                    <div class="entry-content">
-                        <div id="featured-post-slider" class="flexslider">
-                            <ul class="slides">
-                                <li>
-                                    <div class="featured-post-slide">
-                                        <div class="post-background" style="background-image:url('images/thumbs/featured/heater.jpg');"></div>
-                                        <div class="overlay"></div>			   		
-                                        <div class="post-content" style="font-weight: bold;">
-                                            <ul class="entry-meta">
-                                                <li>Solar Water Heater</li> 
-                                                <li><a href="#" >Katni , MP</a></li>				
-                                            </ul>	
-                                            <h1 class="slide-title">
-                                                <a href="waterheater.html" title="">Redren Solar water heater in madhya pradesh
-                                                </a>
-                                            </h1> 
-                                        </div>	  
-                                    </div>
-                                </li> <!-- /slide -->
-
-                                <li>
-                                    <div class="featured-post-slide">
-
-                                        <div class="post-background" style="background-image:url('images/thumbs/featured/roof-top-solar.jpg');"></div>
-                                        <div class="overlay"></div>			   		
-                                        <div class="post-content">
-                                            <ul class="entry-meta" style="font-weight: bold;">
-                                                <li>Rooftop Solar -</li>
-                                                <li><a href="#">With subsidy on net-metering</a></li>					
-                                            </ul>	
-                                            <h1 class="slide-title">
-                                                <a href="solarrooftop.html" title="">Rooftop solar system for Home, Petrol pump</a>
-                                            </h1>
-                                        </div>		   				   					  
-
-                                    </div>
-                                </li> <!-- /slide -->
-
-                                <li>
-                                    <div class="featured-post-slide">
-                                        <div class="post-background" style="background-image:url('images/thumbs/featured/covers-aldershot-commercial.jpg');;"></div>
-                                        <div class="overlay"></div>			   		
-                                        <div class="post-content">
-                                            <ul class="entry-meta" style="font-weight: bold;">
-                                                <li>Commercial Solar -</li>
-                                                <li><a href="#" class="author">Going solar is profitable</a></li>
-                                            </ul>
-                                            <h1 class="slide-title"><a href="solarrooftop.html" title="">Solar Factory, Solar Mill, Solar Shop</a></h1>
-                                        </div>
-                                    </div>
-                                </li> <!-- end slide -->
-                            </ul> <!-- end slides -->
-                        </div> <!-- end featured-post-slider -->        			
-                    </div> <!-- end entry content -->         		
+                <div class='brick entry featured-grid'
+                     ng-include="'featured-grid.html'" ng-controller="homeFeature">
                 </div>
-
-                <article class="brick entry format-standard animate-this">
+                
+                <article class="brick entry format-standard">
 
                     <div class="entry-thumb">
                        <a href="waterheater.html" class="thumb-link">
@@ -135,7 +80,7 @@
 
                 </article> <!-- end article -->
 
-                <article class="brick entry format-standard animate-this">
+                <article class="brick entry format-standard">
 
                     <div class="entry-thumb">
                         <a href="solarrooftop.html" class="thumb-link">
@@ -163,7 +108,7 @@
                 </article> <!-- end article -->
 
                 <!-- format audio here -->
-                <article class="brick entry format-audio animate-this">
+                <article class="brick entry format-audio">
 
                     <div class="entry-thumb">
                         <a href="solarrooftop.html" class="thumb-link">
@@ -193,7 +138,7 @@
 
                 </article> <!-- /article -->
                 
-                <article class="brick entry format-link animate-this">
+                <article class="brick entry format-link">
                     <div class="entry-thumb">
                         <div class="link-wrap">
                             <p>Find out how to save power bill with minimum cost |</p>
@@ -204,7 +149,7 @@
                     </div>               
                 </article> <!-- end article -->
 
-                <article class="brick entry animate-this" >
+                <article class="brick entry" >
 
                     <div class="entry-thumb">                  
                         <blockquote>
@@ -216,7 +161,7 @@
 
                 </article> <!-- end article -->
 
-                <article class="brick entry animate-this">
+                <article class="brick entry">
 
                     <div class="entry-thumb">
                         <a href="solarrooftop.html" class="thumb-link">
@@ -245,7 +190,7 @@
 
                 </article> <!-- end article -->
 
-                <article class="brick entry format-gallery group animate-this" style="display:none;">
+                <article class="brick entry format-gallery group" style="display:none;">
                     <div class="entry-thumb">
                         <div class="post-slider flexslider">
                             <ul class="slides">
@@ -284,6 +229,7 @@
    <script src="js/plugins.js"></script>
    <script src="js/jquery.appear.js"></script>
    <script src="js/main.js"></script>
+   <script src="js/app.js"></script>
 
 </body>
 
