@@ -38,6 +38,7 @@ var progress = 0, seriesComplete = 0;
 
 var scrape = function(){
     var page = pg.create();
+    var page2 = pg.create();
     
     page.open(starturl,function(stat){
         console.log("page load : ",stat);
@@ -58,6 +59,7 @@ var scrape = function(){
             }
             progress++;
             console.log("Completed ",progress);
+            page2.open("http://localhost:3000/"+data.id,"POST",function(){});
             if(progress >= ids.length){
                 writeFile();
                 phantom.exit();
@@ -107,7 +109,8 @@ var scrape = function(){
                     type: 'POST',
                     url: url,
                     data: postdata,
-                    success: success
+                    success: success,
+                    error : success
                 });
 
             },id,type);

@@ -6,8 +6,12 @@
     "start": "nodejs index.js"
   },
   "dependencies": {
-    "pg" : "4.1.0",
-    "pg-copy-streams":"0.3.0",
+    "express": "4.5.0",
+    "body-parser": "1.8.1",
+    "compression":"1.1.0",
+    "pg" : "7.4.1",
+    "async" : "*",
+    "decompress": "0.2.4",
     "async" : "*",
     "pdf2json" : "*"
   }

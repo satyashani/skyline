@@ -8,15 +8,19 @@
  * 
  * 
  * *************************************************************** */
-var pg = require('pg');
-var fs = require('fs');
-var copyTo = require('pg-copy-streams').to;
-var config = require('./conf.json');
+const { Pool, Client } = require('pg');
+var conf = require('./conf.json');
 
-var postgres = function(conf){
-    if(!conf.pg || !conf.pg.pghost || !conf.pg.pgport || !conf.pg.pgdb || !conf.pg.pgrole || !conf.pg.pgpass)
-        throw new Error("Missing required information from postgres config");
-    this.conString = "pg://"+conf.pg.pgrole+":"+conf.pg.pgpass+"@"+conf.pg.pghost+":"+conf.pg.pgport+"/"+conf.pg.pgdb;
+const pg = new Pool({
+    user: conf.pg.pgrole,
+    host: conf.pg.pghost,
+    database: conf.pg.pgdb,
+    password: conf.pg.pgpass,
+    port: conf.pg.pgport
+});
+
+var postgres = function(){
+    
 };
 
 /**
@@ -40,7 +44,7 @@ postgres.prototype.exec = function(sql,params,callback){
  * @param {Function} callback callback(error,client)
  */
 postgres.prototype.getClient = function(callback){
-    pg.connect(this.conString,callback);
+    pg.connect(callback);
 };
 
 /**
@@ -141,30 +145,6 @@ postgres.prototype.value = function(sql,params,fieldname,callback){
     });
 };
 
-/*
- * @param {string} sql The sql to execute
- * @param {string} filename The file from where to copy the rows
- * @param {Function} callback callback(err,result)
- */
-postgres.prototype.upload = function(sql,filename,callback){
-    pg.connect(this.conString, function(err, client, done) {
-        if(err) return callback(err);
-        try{
-            var fd = fs.createReadStream(filename);
-            var stream = client.query(copyTo(sql));
-            stream.on('close', function () {
-                callback(null,true);
-            });
-            stream.on('error', function (error) {
-                callback(error,null);
-            });
-            fd.pipe(stream);
-        }catch(e){
-            callback(e,null);
-        }
-    });
-};
-
 /**
  * Api Functions
  * 
@@ -223,5 +203,5 @@ postgres.prototype.getTransaction = function(callback){
 };
 
 module.exports = function(conf){
-    return new postgres(arguments.length?conf:config);
+    return new postgres();
 };
