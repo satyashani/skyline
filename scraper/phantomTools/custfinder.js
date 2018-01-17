@@ -19,7 +19,7 @@ var args = system.args;
 
 var series = require("../data/series.json");
 
-var todo = args[1] || series[0];
+var todo = parseInt(args[1] || series[0]);
 
 var pre = [10000,99999];
 var ids = [];
@@ -32,7 +32,7 @@ var found = [];
 
 var starturl = "http://www.mpez.co.in/portal/Jabalpur_home.portal?_nfpb=true&_pageLabel=custCentre_viewBill_jbl";
 
-var type = args[1] || 'lt';
+var type = args[2] || 'lt';
 
 var progress = 0, seriesComplete = 0;
 
@@ -40,6 +40,10 @@ var scrape = function(){
     var page = pg.create();
     var page2 = pg.create();
     
+    page2.open("http://localhost:3000/test?id=1",function(){
+        page2.injectJs(jq);
+    });
+        
     page.open(starturl,function(stat){
         console.log("page load : ",stat);
         
@@ -54,12 +58,15 @@ var scrape = function(){
         };
         
         page.onCallback = function(data){
-            if(data.response){
-                found.push(data);
-            }
             progress++;
             console.log("Completed ",progress);
-            page2.open("http://localhost:3000/"+data.id,"POST",function(){});
+            if(data.response && data.response.accountId){
+                page2.evaluate(function(id,d){
+                    $.post("http://localhost:3000/"+id,d,function(){
+                        
+                    });
+                },data.response.accountId,data.response);
+            }
             if(progress >= ids.length){
                 writeFile();
                 phantom.exit();

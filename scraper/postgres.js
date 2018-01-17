@@ -34,7 +34,7 @@ postgres.prototype.exec = function(sql,params,callback){
         if(err) return callback(err);
         client.query(sql,params, function(errq, result) {
             callback(errq,result);
-            done();
+                done();
         });
     });
 };
