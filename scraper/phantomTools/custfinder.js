@@ -62,10 +62,15 @@ var scrape = function(){
             console.log("Completed ",progress);
             if(data.response && data.response.accountId){
                 page2.evaluate(function(id,d){
-                    $.post("http://localhost:3000/"+id,d,function(){
-                        
+                    $.ajax({
+                        type: 'POST',
+                        url: "http://localhost:3001/"+id,
+                        data: d, // or JSON.stringify ({name: 'jonas'}),
+                        success: function() {  },
+                        contentType: "application/json",
+                        dataType: 'json'
                     });
-                },data.response.accountId,data.response);
+                },data.response.accountId,JSON.stringify(data.response));
             }
             if(progress >= ids.length){
                 writeFile();
