@@ -40,7 +40,7 @@ var scrape = function(){
     var page = pg.create();
     var page2 = pg.create();
     
-    page2.open("http://localhost:3000/test?id=1",function(){
+    page2.open("http://localhost:3001/test?id=1",function(){
         page2.injectJs(jq);
     });
         
