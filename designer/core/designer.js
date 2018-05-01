@@ -28,6 +28,8 @@ var inputs = {
     "loadmax" : 3000
 };
 
+var structurecost = 500; // Per panel
+
 exports.design = function(inputs){
     
     var unitperkw = 5;
@@ -127,18 +129,22 @@ exports.design = function(inputs){
                 var s = {
                     inverter : i.name, maxload : i.loadkwmax, maxpv : i.pvkwmax,
                     panel : { 
-                        name : p.panel.name , series : p.series, parallel : p.parallel, 
+                        name : p.panel.name , series : p.series, parallel : p.parallel, power : p.panel.power,
                         totalkw : p.totalkw, diff : Math.abs(p.totalkw - pvkwreq) ,
                         diffcat : diffcat( Math.abs(p.totalkw - pvkwreq),pvkwreq)
                     },
                     battery : { 
-                        name : b.battery.name, series : b.series, parallel : b.parallel, 
+                        name : b.battery.name, series : b.series, parallel : b.parallel, ah : b.battery.ah,
                         totalah : b.totalah, diff : Math.abs(b.totalah - bahreq) ,
                         diffcat : diffcat(Math.abs(b.totalah - bahreq),bahreq)
                     },
                     cost : i.mrp * (1+i.tax/100) + 
                            p.totalkw * p.panel.price * (1+p.panel.tax/100) + 
-                           b.series * b.parallel * b.battery.price * (1+b.battery.tax/100)
+                           b.series * b.parallel * b.battery.price * (1+b.battery.tax/100) +
+                           p.series * p.parallel * structurecost,
+                    ranks : {
+                        cost : 0, battery : 0, panel : 0, kw : 0, pvmatch : 0, ahmatch : 0, load : 0, maxpv : 0, ah : 0
+                    }
                 };
                 i.solutions.push(s);
                 summary.push(s);
@@ -153,11 +159,84 @@ exports.design = function(inputs){
             final.push(i);
         }
     });
-
+    
+    // Get Ranks
+    //      By cost
+    var costs = summary.map(function(a){ return a.cost;}).sort();
+    //      By panel power
+    var panelsize = [];
+    summary.forEach(function(a){
+        if(panelsize.indexOf(a.panel.power) === -1)
+            panelsize.push(a.panel.power);
+    });
+    panelsize.sort(function(a,b){ return b-a;});
+    //      By ah size
+    var batterysize = [];
+    summary.forEach(function(a){
+        if(batterysize.indexOf(a.battery.ah) === -1)
+            batterysize.push(a.battery.ah);
+    });
+    batterysize.sort(function(a,b){ return b-a;});
+    //      By kw
+    var kw = [];
+    summary.forEach(function(a){
+        if(kw.indexOf(a.panel.totalkw) === -1)
+            kw.push(a.panel.totalkw);
+    });
+    kw.sort(function(a,b){ return b-a;});
+    //      By ah
+    var ah = [];
+    summary.forEach(function(a){
+        if(ah.indexOf(a.battery.totalah) === -1)
+            ah.push(a.battery.totalah);
+    });
+    ah.sort(function(a,b){ return b-a;});
+    //      By pvmatch
+    var pvdiff = [];
+    summary.forEach(function(a){
+        if(pvdiff.indexOf(a.panel.diff) === -1)
+            pvdiff.push(a.panel.diff);
+    });
+    pvdiff.sort();
+    //      By ahmatch
+    var ahdiff = [];
+    summary.forEach(function(a){
+        if(ahdiff.indexOf(a.battery.diff) === -1)
+            ahdiff.push(a.battery.diff);
+    });
+    ahdiff.sort();
+    //      By max load
+    var maxloads = [];
+    summary.forEach(function(a){
+        if(maxloads.indexOf(a.maxload) === -1)
+            maxloads.push(a.maxload);
+    });
+    maxloads.sort();
+    //      By max pv
+    var maxpv = [];
+    summary.forEach(function(a){
+        if(maxpv.indexOf(a.maxpv) === -1)
+            maxpv.push(a.maxpv);
+    });
+    maxpv.sort();
+    
+    // Save ranks
+    summary.forEach(function(s){ 
+        s.ranks.cost = costs.indexOf(s.cost)+1; 
+        s.ranks.panel = panelsize.indexOf(s.panel.power)+1; 
+        s.ranks.battery = batterysize.indexOf(s.battery.ah)+1; 
+        s.ranks.kw = kw.indexOf(s.panel.totalkw)+1; 
+        s.ranks.pvmatch = pvdiff.indexOf(s.panel.diff)+1; 
+        s.ranks.ahmatch = ahdiff.indexOf(s.battery.diff)+1; 
+        s.ranks.load = maxloads.indexOf(s.maxload)+1;
+        s.ranks.maxpv = maxpv.indexOf(s.maxpv)+1;
+        s.ranks.ah = ah.indexOf(s.battery.totalah) + 1;
+        s.rank = ( s.ranks.cost * .1 + s.ranks.panel * 0.25 + s.ranks.battery * 0.25 + s.ranks.kw * .25 + s.ranks.ah * .25 +
+                   s.ranks.load * 0.05 + s.ranks.maxpv * 0.05 + s.ranks.pvmatch * 0.05 + s.ranks.ahmatch * 0.05 ) / 9;
+    });
+    
     summary.sort(function(a,b){
-        var wa = a.cost * a.panel.diffcat * a.battery.diffcat * a.panel.series * a.panel.parallel * a.battery.series * a.battery.parallel,
-            wb = b.cost * b.panel.diffcat * b.battery.diffcat * b.panel.series * b.panel.parallel * b.battery.series * b.battery.parallel;
-        return wa - wb;
+        return a.rank - b.rank;
     });
 
     fs.writeFileSync("results/solutions.json",JSON.stringify(final,1,4));
