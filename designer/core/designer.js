@@ -126,25 +126,41 @@ exports.design = function(inputs){
 
         i.panels.forEach(function(p){
             i.batteries.forEach(function(b){
+                var iscombo = i.brand === b.battery.brand && i.brand === p.panel.brand;
                 var s = {
-                    inverter : i.name, maxload : i.loadkwmax, maxpv : i.pvkwmax,
+                    inverter : i.name, maxload : i.loadkwmax, maxpv : i.pvkwmax, iscombo : iscombo, brand : i.brand,
                     panel : { 
                         name : p.panel.name , series : p.series, parallel : p.parallel, power : p.panel.power,
-                        totalkw : p.totalkw, diff : Math.abs(p.totalkw - pvkwreq) ,
+                        totalkw : p.totalkw, diff : Math.abs(p.totalkw - pvkwreq) , brand : p.panel.brand,
                         diffcat : diffcat( Math.abs(p.totalkw - pvkwreq),pvkwreq)
                     },
                     battery : { 
                         name : b.battery.name, series : b.series, parallel : b.parallel, ah : b.battery.ah,
-                        totalah : b.totalah, diff : Math.abs(b.totalah - bahreq) ,
+                        totalah : b.totalah, diff : Math.abs(b.totalah - bahreq) , brand : b.battery.brand,
                         diffcat : diffcat(Math.abs(b.totalah - bahreq),bahreq)
                     },
-                    cost : i.mrp * (1+i.tax/100) + 
-                           p.totalkw * p.panel.price * (1+p.panel.tax/100) + 
-                           b.series * b.parallel * b.battery.price * (1+b.battery.tax/100) +
+                    cost : i.mrp * (1+(iscombo ? i.combotax : i.tax)/100) + 
+                           p.totalkw * p.panel.price * (1+ p.panel.tax/100) + 
+                           b.series * b.parallel * b.battery.price * (1+ (iscombo ? b.battery.combotax : b.battery.tax)/100) +
                            p.series * p.parallel * structurecost,
+                    tax : i.mrp * (iscombo ? i.combotax : i.tax)/100 + 
+                           p.totalkw * p.panel.price *  p.panel.tax/100 + 
+                           b.series * b.parallel * b.battery.price * (iscombo ? b.battery.combotax : b.battery.tax)/100,
                     ranks : {
                         cost : 0, battery : 0, panel : 0, kw : 0, pvmatch : 0, ahmatch : 0, load : 0, maxpv : 0, ah : 0
                     }
+                };
+                s.costpc = {
+                    panel : Math.ceil(p.totalkw * p.panel.price * (1+ p.panel.tax/100) / s.cost * 100),
+                    battery : Math.ceil(b.series * b.parallel * b.battery.price * (1+ (iscombo ? b.battery.combotax : b.battery.tax)/100) / s.cost * 100),
+                    inverter : Math.ceil(i.mrp * (1+(iscombo ? i.combotax : i.tax)/100) / s.cost * 100),
+                    structure : Math.ceil(p.series * p.parallel * structurecost / s.cost * 100)
+                };
+                s.rankpc = {
+                    ah : Math.ceil(s.battery.totalah  * 100 / bahreq),
+                    pvkw : Math.ceil(s.panel.totalkw * 100 / pvkwreq),
+                    maxload : Math.ceil(s.maxload * 100/ inputs.loadmax),
+                    output : Math.ceil(s.panel.totalkw * i.solarefficiency / 100 * unitperkw / 1000 / inputs.dailyunits * 100)
                 };
                 i.solutions.push(s);
                 summary.push(s);
@@ -162,7 +178,7 @@ exports.design = function(inputs){
     
     // Get Ranks
     //      By cost
-    var costs = summary.map(function(a){ return a.cost;}).sort();
+    var costs = summary.map(function(a){ return a.cost;}).sort(function(a,b){ return a-b; });
     //      By panel power
     var panelsize = [];
     summary.forEach(function(a){
@@ -197,28 +213,28 @@ exports.design = function(inputs){
         if(pvdiff.indexOf(a.panel.diff) === -1)
             pvdiff.push(a.panel.diff);
     });
-    pvdiff.sort();
+    pvdiff.sort(function(a,b){ return a-b;});
     //      By ahmatch
     var ahdiff = [];
     summary.forEach(function(a){
         if(ahdiff.indexOf(a.battery.diff) === -1)
             ahdiff.push(a.battery.diff);
     });
-    ahdiff.sort();
+    ahdiff.sort(function(a,b){ return a-b;});
     //      By max load
     var maxloads = [];
     summary.forEach(function(a){
         if(maxloads.indexOf(a.maxload) === -1)
             maxloads.push(a.maxload);
     });
-    maxloads.sort();
+    maxloads.sort(function(a,b){ return a-b;});
     //      By max pv
     var maxpv = [];
     summary.forEach(function(a){
         if(maxpv.indexOf(a.maxpv) === -1)
             maxpv.push(a.maxpv);
     });
-    maxpv.sort();
+    maxpv.sort(function(a,b){ return a-b;});
     
     // Save ranks
     summary.forEach(function(s){ 
@@ -231,8 +247,9 @@ exports.design = function(inputs){
         s.ranks.load = maxloads.indexOf(s.maxload)+1;
         s.ranks.maxpv = maxpv.indexOf(s.maxpv)+1;
         s.ranks.ah = ah.indexOf(s.battery.totalah) + 1;
-        s.rank = ( s.ranks.cost * .1 + s.ranks.panel * 0.25 + s.ranks.battery * 0.25 + s.ranks.kw * .25 + s.ranks.ah * .25 +
-                   s.ranks.load * 0.05 + s.ranks.maxpv * 0.05 + s.ranks.pvmatch * 0.05 + s.ranks.ahmatch * 0.05 ) / 9;
+        s.rank = ( s.ranks.cost * 2 + s.ranks.panel * 1 + s.ranks.battery * 1 + s.ranks.kw * 2 + s.ranks.ah * 2 +
+                   s.ranks.load * 0.5 + s.ranks.maxpv * 0.5 + s.ranks.pvmatch * 0.5 + s.ranks.ahmatch * 0.5 ) / 9;
+        
     });
     
     summary.sort(function(a,b){

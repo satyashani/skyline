@@ -1,42 +1,88 @@
 <div ng-controller="designer">
-    <form class="form-horizontal">
-        <select name="type" ng-model="inputs.type" class="form-control"  ng-options="key as value for (key,value) in types"></select>
-        <input type="text" name="dailyunits" ng-model="inputs.dailyunits" class="form-control"/>
-        <input type="text" name="backupkw" ng-model="inputs.backupkw" class="form-control"/>
-        <input type="text" name="backuphrs" ng-model="inputs.backuphrs" class="form-control"/>
-        <input type="text" name="loadmax" ng-model="inputs.loadmax" class="form-control"/>
-        <button type="submit" ng-click="design()" >Design</button>
-    </form>
-    <table class="table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Inverter</th>
-                <th>Panels</th>
-                <th>Batteries</th>
-                <th>Cost</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="r in results">
-                <td style="padding: 0px 20px 0px 20px;">
-                    {{ r.inverter }}
-                </td>
-                <td style="padding: 0px 20px 0px 20px;">
-                    {{ r.panel.name }} |
-                    Series - {{ r.panel.series }} |
-                    Parallel - {{ r.panel.parallel }} |
-                    Total KW - {{ r.panel.totalkw }}
-                </td>
-                <td style="padding: 0px 20px 0px 20px;">
-                    {{ r.battery.name }} |
-                    Series - {{ r.battery.series }} |
-                    Parallel - {{ r.battery.parallel }} |
-                    Total AH - {{ r.battery.totalah }}
-                </td>
-                <td style="padding: 0px 20px 0px 20px;">
-                    {{ r.cost }}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <select name="type" ng-model="inputs.type" class="form-control"  ng-options="key as value for (key,value) in types"></select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="dailyunits" ng-model="inputs.dailyunits" class="form-control" placeholder="Daily Units"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="backupkw" ng-model="inputs.backupkw" class="form-control" placeholder="Back up Load (Watt)"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="backuphrs" ng-model="inputs.backuphrs" class="form-control" placeholder="Backup Hours"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="loadmax" ng-model="inputs.loadmax" class="form-control" placeholder="Max Load(Watt)"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" ng-click="design()" >Design</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="padding-top: 10px;" ng-if="results.length">
+            <h3>Results</h3>
+            <table class="table-bordered table-striped" >
+                <thead>
+                    <tr>
+                        <th style="padding: 0px 20px 0px 20px;">Inverter</th>
+                        <th style="padding: 0px 20px 0px 20px;">Panels</th>
+                        <th style="padding: 0px 20px 0px 20px;">Batteries</th>
+                        <th style="padding: 0px 20px 0px 20px;">Cost</th>
+                        <th style="padding: 0px 20px 0px 20px;">Value</th>
+                        <th style="padding: 0px 20px 0px 20px;">Cost Ratio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="r in results">
+                        <td style="padding: 0px 20px 0px 20px;">
+                            {{ r.inverter }}
+                        </td>
+                        <td style="padding: 0px 20px 0px 20px;">
+                            <div>
+                                Panel - {{ r.panel.totalkw }}kW
+                            </div>
+                            <div> Model - {{ r.panel.name }}</div>
+                            <small>
+                                Series - {{ r.panel.series }} |
+                                Parallel - {{ r.panel.parallel }}
+                            </small>
+                        </td>
+                        <td style="padding: 0px 20px 0px 20px;">
+                            <div>
+                                Capacity - {{ r.battery.totalah }}AH
+                            </div>
+                            <div>
+                                {{ r.battery.name }}
+                            </div>
+                            <small>
+                                Series - {{ r.battery.series }} |
+                                Parallel - {{ r.battery.parallel }}
+                            </small>
+                        </td>
+                        <td style="padding: 0px 20px 0px 20px;">
+                            <div>Rs. {{ r.cost }}/-</div>
+                            <small>Tax : Rs. {{ r.tax }}/-</small>
+                        </td>
+                        <td style="padding: 0px 20px 0px 20px;">
+                            <div> Panel Capacity : {{r.rankpc.pvkw}}%</div>
+                            <div> Battery Capacity : {{r.rankpc.ah}}%</div>
+                            <div> Peak Load : {{r.rankpc.maxload}}%</div>
+                            <div> Output : {{r.rankpc.output}}%</div>
+                        </td>
+                        <td style="padding: 0px 20px 0px 20px;">
+                            <div> Panel : {{r.costpc.panel}}%</div>
+                            <div> Battery : {{r.costpc.battery}}%</div>
+                            <div> Inverter : {{r.costpc.inverter}}%</div>
+                            <div> Structure : {{r.costpc.structure}}%</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
