@@ -1,0 +1,42 @@
+<div ng-controller="designer">
+    <form class="form-horizontal">
+        <select name="type" ng-model="inputs.type" class="form-control"  ng-options="key as value for (key,value) in types"></select>
+        <input type="text" name="dailyunits" ng-model="inputs.dailyunits" class="form-control"/>
+        <input type="text" name="backupkw" ng-model="inputs.backupkw" class="form-control"/>
+        <input type="text" name="backuphrs" ng-model="inputs.backuphrs" class="form-control"/>
+        <input type="text" name="loadmax" ng-model="inputs.loadmax" class="form-control"/>
+        <button type="submit" ng-click="design()" >Design</button>
+    </form>
+    <table class="table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Inverter</th>
+                <th>Panels</th>
+                <th>Batteries</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="r in results">
+                <td style="padding: 0px 20px 0px 20px;">
+                    {{ r.inverter }}
+                </td>
+                <td style="padding: 0px 20px 0px 20px;">
+                    {{ r.panel.name }} |
+                    Series - {{ r.panel.series }} |
+                    Parallel - {{ r.panel.parallel }} |
+                    Total KW - {{ r.panel.totalkw }}
+                </td>
+                <td style="padding: 0px 20px 0px 20px;">
+                    {{ r.battery.name }} |
+                    Series - {{ r.battery.series }} |
+                    Parallel - {{ r.battery.parallel }} |
+                    Total AH - {{ r.battery.totalah }}
+                </td>
+                <td style="padding: 0px 20px 0px 20px;">
+                    {{ r.cost }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

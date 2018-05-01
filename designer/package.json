@@ -1,0 +1,14 @@
+{
+  "name": "xrayAdminServer",
+  "version": "1.3.4",
+  "private": true,
+  "scripts": {
+    "start": "nodejs index.js"
+  },
+  "dependencies": {
+    "express": "4.5.0",
+    "body-parser": "1.8.1",
+    "compression":"1.1.0",
+    "async" : "*"
+  }
+}
