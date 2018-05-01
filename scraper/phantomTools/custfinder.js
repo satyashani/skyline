@@ -19,8 +19,9 @@ var args = system.args;
 
 var series = require("../data/series.json");
 
-var todo = parseInt(args[1] || series[0]);
+var todo = parseInt(args[1]) || series[0];
 
+var startid = parseInt(args[2]) || 10000;
 var pre = [10000,99999];
 var ids = [];
 

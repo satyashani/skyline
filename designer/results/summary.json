@@ -1,0 +1,1938 @@
+[
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 187620
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 198540
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 211665
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 179748
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 185380
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 188580
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 189237
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 205092
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 189657
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 223887
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 214027.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 190668
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 196300
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 199500
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 221892
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 203793
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 209425
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 233704.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 212625
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 213282
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 238167
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 216012
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 249979.5
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 250557
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 229137
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 234807
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 262369.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 197952
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 247932
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 214227
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 226617
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 176437
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 185653
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 201469.5
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 176857
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 186073
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 211087
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 206155.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 220303
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 211787.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 214987.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 209092
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 218308
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 231499.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 220904.5
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 200482
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 225367
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 230120.5
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 209698
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 234583
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 250294.5
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 237179.5
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 237757
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 214820
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 246395.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 222007
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 185152
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 246973
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 249569.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 254967
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 231223
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 258785.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 194368
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 235132
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 201427
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 271242
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 244348
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 210643
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 283632
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 213817
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "totalkw": 2560,
+            "diff": 160,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "totalah": 450,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 214308
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "totalkw": 1920,
+            "diff": 480,
+            "diffcat": 2
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 223033
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 225740
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 188669.5
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "totalkw": 2250,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 197885.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 238865
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "totalah": 450,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 225228
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "totalkw": 2500,
+            "diff": 100,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "totalah": 450,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 238353
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 237494.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 246710.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 242167
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 251383
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 258442
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 267658
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "totalah": 300,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 270832
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "totalkw": 2700,
+            "diff": 300,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "totalah": 320,
+            "diff": 55,
+            "diffcat": 1
+        },
+        "cost": 280048
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "totalah": 400,
+            "diff": 25,
+            "diffcat": 1
+        },
+        "cost": 241227.5
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "totalkw": 2550,
+            "diff": 150,
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "totalah": 450,
+            "diff": 75,
+            "diffcat": 2
+        },
+        "cost": 240715.5
+    }
+]

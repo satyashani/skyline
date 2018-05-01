@@ -1,0 +1,72 @@
+[
+    {
+        "name" : "HBL 150AH Solar",
+        "brand" : "HBL",
+        "warranty" : "3",
+        "ah" : 150,
+        "v" : 12,
+        "price" : 15750,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "HBL 100AH Solar",
+        "brand" : "HBL",
+        "warranty" : "3",
+        "ah" : 100,
+        "v" : 12,
+        "price" : 11100,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "HBL 75AH Solar",
+        "brand" : "HBL",
+        "warranty" : "3",
+        "ah" : 75,
+        "v" : 12,
+        "price" : 8600,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "HBL 40AH Solar",
+        "brand" : "HBL",
+        "warranty" : "3",
+        "ah" : 40,
+        "v" : 12,
+        "price" : 5200,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "UTL 150AH Solar 3y",
+        "brand" : "UTL",
+        "warranty" : "3",
+        "ah" : 150,
+        "v" : 12,
+        "price" : 12300,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "UTL 150AH Solar 5y",
+        "brand" : "UTL",
+        "warranty" : "5",
+        "ah" : 150,
+        "v" : 12,
+        "price" : 14500,
+        "tax" : 28,
+        "maxdiscount" : 10
+    },
+    {
+        "name" : "UTL 200AH Solar",
+        "brand" : "UTL",
+        "warranty" : "5",
+        "ah" : 200,
+        "v" : 12,
+        "price" : 15375,
+        "tax" : 28,
+        "maxdiscount" : 10
+    }
+]

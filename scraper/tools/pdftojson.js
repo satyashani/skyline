@@ -6,7 +6,6 @@
 
 var fs = require('fs');
 var p2j = require("pdf2json");
-var bills = require("./downloadids");
 var async = require("async");
 
 var start = parseInt(process.argv[2]) || 0;
@@ -106,32 +105,32 @@ var extract = function(input){
 };
 
 var convert = function(id,cb){
-    if(!fs.existsSync("./pdf/"+id+".pdf"))
+    if(!fs.existsSync("../data/"+id+".pdf"))
         return cb();
     var pdfParser = new p2j();
 
     pdfParser.on("pdfParser_dataError", function(err) { 
-        console.error(id,err.parserError);
+        console.error(id,err.parserError,err);
         cb();
     });
     pdfParser.on("pdfParser_dataReady", function(data) {
-        var out = [];
-        data.formImage.Pages[0].Texts.forEach(function(t){
-            out.push({value : t.R[0].T});
-        });
         
-        fs.writeFileSync("./json/"+id+".json", JSON.stringify(out,0,4));
-        fs.writeFileSync("./json2/"+id+".json", JSON.stringify(extract(out),0,4));
+//        fs.writeFileSync("./json/"+id+".json", JSON.stringify(out,0,4));
+        fs.writeFileSync("../data/"+id+".json", JSON.stringify(data,0,4));
         cb();
     });
 
-    pdfParser.loadPDF("./pdf/"+id+".pdf");
+    pdfParser.loadPDF("../data/"+id+".pdf");
     
 };
 
-var small = bills.slice(start,start+5000);
-async.eachSeries(small,function(bill,cb){
-    convert(bill.accountid,cb);
-},function(){
-    console.log("Completed");
+//var small = bills.slice(start,start+5000);
+//async.eachSeries(small,function(bill,cb){
+//    convert(bill.accountid,cb);
+//},function(){
+//    console.log("Completed");
+//});
+
+convert('yp',function(){
+    console.log("done");
 });

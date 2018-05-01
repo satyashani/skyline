@@ -30,6 +30,7 @@ var insertBill = function(row,callback){
             }
         }
     });
+    params.type = "";
     if(row.hasOwnProperty('billMonth')){
         var m = row.billMonth.toString().match(/([A-Z]{3})\-(\d+)/);
         if(m && months.indexOf(m[1]) > -1){
@@ -50,10 +51,11 @@ var insertBill = function(row,callback){
 };
 
 var process = function(){
-    pg.selectAll("SELECT * FROM skyline.rawcust",[],function(err,res){
+    pg.selectAll("SELECT * FROM skyline.rawcust r where not exists (select 1 from skyline.billsjan18 b where b.accountid = r.id )",[],function(err,res){
         console.log("Received raw data",res ? res.length : (err ? err.message : 0));
-        console.log(res[0].data);
         async.each(res,function(r,cb){
+            if(r.data.amtToBePaid.toString().match(/E/))
+                r.data.amtToBePaid = parseFloat(r.data.amtToBePaid.toString());
             insertBill(r.data,function(err){
                 if(err && !err.message.match(/duplicate/)){
                     console.log("Error for id ",r.data.id,err.message);

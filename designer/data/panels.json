@@ -1,0 +1,62 @@
+[
+    {
+        "name" : "HB-250",
+        "brand" : "HBL",
+        "power" : 250,
+        "voc" : 44.8,
+        "vmax" : 37.72,
+        "isc" : 7.45,
+        "imax" : 6.86,
+        "cells" : 72,
+        "price" : 45,
+        "tax" : 5,
+        "maxdiscount" : 10,
+        "minorder" : 500,
+        "maxsysv" : 1000
+    },
+    {
+        "name" : "HB-150",
+        "brand" : "HBL",
+        "power" : 150,
+        "voc" : 22.5,
+        "vmax" : 18.9,
+        "isc" : 7.08,
+        "imax" : 6.69,
+        "cells" : 36,
+        "price" : 45,
+        "tax" : 5,
+        "maxdiscount" : 10,
+        "minorder" : 300,
+        "maxsysv" : 1000
+    },
+    {
+        "name" : "UTL-250",
+        "brand" : "UTL",
+        "power" : 250,
+        "voc" : 37.8,
+        "vmax" : 31,
+        "isc" : 8.55,
+        "imax" : 8.08,
+        "cells" : 60,
+        "price" : 40,
+        "tax" : 5,
+        "maxdiscount" : 10,
+        "minorder" : 500,
+        "maxsysv" : 1000
+    },
+    {
+        "name" : "HHV-320-72",
+        "brand" : "HHV",
+        "power" : 320,
+        "voc" : 45.9,
+        "vmax" : 37,
+        "isc" : 9.14,
+        "imax" : 8.65,
+        "cells" : 71,
+        "price" : 35,
+        "tax" : 5,
+        "maxdiscount" : 10,
+        "minorder" : 1000,
+        "maxsysv" : 1000
+    }
+]
