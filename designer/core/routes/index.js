@@ -16,7 +16,14 @@ var design = function(req,res){
         "loadmax" : req.body.loadmax || 3000,
         "filter" : req.body.filter
     };
-    var summary = designer.design(inputs);
+    var summary = [];
+    if(inputs.type === 'offgrid'){
+        summary = designer.offgrid(inputs);
+    }else if(inputs.type === 'hybrid'){
+        summary = designer.hybrid(inputs);
+    }else{
+        summary = designer.ongrid(inputs);
+    }
     res.json(summary);
 };
 

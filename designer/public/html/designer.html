@@ -38,6 +38,9 @@
                 <div class="col-lg-2 pull-right">
                     <select name="sortkey" ng-model="sortkey" class="form-control"  ng-options="key as value for (key,value) in sortkeys" ng-change="sort()"></select>
                 </div>
+                <div class="col-lg-2 pull-right" style="text-align: right;">
+                   <label>Sort :</label>
+                </div>
             </div>
             <div class="row well"  ng-repeat="r in results">
                 
@@ -62,7 +65,7 @@
                             </div>
                             <div class="col-lg-5">
                                 <a href="#" class="thumbnail">
-                                    <img src="/image/{{r.inverter}}.jpg" alt="No Image" height="100" style="min-height: 125px;" />
+                                    <img src="/img/{{r.inverter}}.jpg" alt="No Image" height="100" style="min-height: 125px;" />
                                 </a>
                             </div>
                         </div>
@@ -85,7 +88,7 @@
                         </div>
                     </div> 
                     
-                    <div class="panel panel-success">
+                    <div class="panel panel-success" ng-if="inputs.type !== 'ongrid'">
                         <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
                             <span class="panel-title" style=" font-size: 12px;">Battery</span> 
                         </div> 
@@ -114,7 +117,7 @@
                               
                             </div>
                         </div>
-                        <div class="progress value">
+                        <div class="progress value" ng-if="inputs.type !== 'ongrid'">
                             <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.ah}}%;">
                               Battery Capacity
                             </div>
@@ -140,7 +143,7 @@
                             <div class="progress-bar progress-bar-success" style="width: {{r.costpc.panel}}%;">
                                Panel
                             </div>
-                            <div class="progress-bar progress-bar-warning" style="width: {{r.costpc.battery}}%;">
+                            <div class="progress-bar progress-bar-warning" style="width: {{r.costpc.battery}}%;" ng-if="inputs.type !== 'ongrid'">
                                Battery
                             </div>
                             <div class="progress-bar progress-bar-danger" style="width: {{r.costpc.inverter}}%;">

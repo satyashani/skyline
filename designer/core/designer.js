@@ -30,7 +30,7 @@ var inputs = {
 
 var structurecost = 500; // Per panel
 
-exports.design = function(inputs){
+var offGridHybrid = function(inputs){
     
     var unitperkw = 5;
     var pvkwreq = inputs.dailyunits * 1000 / unitperkw;
@@ -209,6 +209,156 @@ exports.design = function(inputs){
     fs.writeFileSync("results/solutions.json",JSON.stringify(final,1,4));
     fs.writeFileSync("results/summary.json",JSON.stringify(summary,1,4)); 
     fs.writeFileSync("results/filtered.json",JSON.stringify(summary,1,4)); 
+    
+    return inputs.filter ? filtered : summary;
+};
+
+
+exports.offgrid = offGridHybrid;
+exports.hybrid = offGridHybrid;
+
+
+exports.ongrid = function(inputs){
+    
+    var unitperkw = 5;
+    var pvkwreq = inputs.dailyunits * 1000 / unitperkw;
+    
+    //inverter selection 
+    //max load must be < inverter max kw
+    //pvkw must be < inverter pvkwmax
+    var selectedinvt = [], final = [],summary = [];
+    inverters.forEach(function(i){
+        if(i.systemtype === inputs.type && i.pvkwmax >= pvkwreq && i.loadkwmax >= inputs.loadmax){
+            selectedinvt.push(i);
+        }
+    });
+
+    selectedinvt.forEach(function(i){
+        i.panels = [];
+        i.solutions = [];
+        //panel selection
+
+        panels.forEach(function(p){
+            var s = {series : 1, parallel : 1, panel : p};
+            s.totalkw = p.power * s.series * s.parallel;
+            s.totalcurrent = p.imax * s.parallel;
+            s.voc = p.vmax * s.series;
+
+            //panel voc must be below or in between inverter pv dc range
+            //panel imax must be below inverter max charging current
+            //create as many series as in inverter
+
+            if(p.vmax < i.pvv[1] && p.imax < i.maxchargecurrent){
+                //if series voc is less than inverter voc, add more panels to series until series voc reaches in the range. this is minimum panels in series
+                //for each panel combination, check if -
+                //	total kw is less than inverter max kw
+                //	total system voc is less than panel's max system V
+                //add more panels as long as voc is not out of range
+                while(s.voc < i.pvv[1] && s.totalkw <= i.pvkwmax && s.totalkw <= pvkwreq ){
+                    if((s.series+1)*p.vmax > i.pvv[1] || (s.series+1) * p.power > i.pvkwmax){
+                        break;
+                    }
+                    s.series ++;
+                    s.totalkw = p.power * s.series * s.parallel;
+                    s.voc = s.series * p.vmax;
+                }
+                if(s.voc < i.pvv[0]){
+                    return;
+                }
+                //multiply series untill total kw is just above required kw, save values just below required and just above required kw
+                var p1 = Math.floor( pvkwreq / s.totalkw ), p2 = Math.ceil( pvkwreq / s.totalkw );
+                var p1kwdiff = pvkwreq - p1 * s.totalkw, p2kwdiff = p2 * s.totalkw - pvkwreq;
+                s.parallel = p1kwdiff > p2kwdiff ? p2 : p1;
+                s.totalkw = p.power * s.series * s.parallel;
+                s.totalcurrent = p.imax * s.parallel;
+                s.diff = Math.abs(pvkwreq - s.totalkw);
+                //	total current is less than inverter charging current
+                if(s.totalcurrent > i.maxchargecurrent){
+                    return;
+                }
+                i.panels.push(s);
+            }
+        });
+        //order by difference from required kw
+        i.panels.sort(function(a,b){
+            var wa = a.diff * a.series * a.parallel * a.panel.price, wb = b.diff * b.series * b.parallel * b.panel.price;
+            return wa - wb;
+        });
+
+
+        i.panels.forEach(function(p){
+            var s = {
+                inverter : i.name, maxload : i.loadkwmax, maxpv : i.pvkwmax, brand : i.brand,
+                panel : { 
+                    name : p.panel.name , series : p.series, parallel : p.parallel, power : p.panel.power,
+                    totalkw : p.totalkw, diff : Math.abs(p.totalkw - pvkwreq) , brand : p.panel.brand,
+                    diffcat : diffcat( Math.abs(p.totalkw - pvkwreq),pvkwreq)
+                },
+                cost : i.mrp * (1+ i.tax/100) + 
+                       p.totalkw * p.panel.price * (1+ p.panel.tax/100) + 
+                       p.series * p.parallel * structurecost,
+                tax : i.mrp * i.tax/100 + 
+                       p.totalkw * p.panel.price *  p.panel.tax/100,
+                ranks : {
+                    cost : 0, panel : 0, kw : 0, pvmatch : 0, load : 0, maxpv : 0
+                }
+            };
+            s.costpc = {
+                panel : Math.ceil(p.totalkw * p.panel.price * (1+ p.panel.tax/100) / s.cost * 100),
+                inverter : Math.ceil(i.mrp * (1+i.tax/100) / s.cost * 100),
+                structure : Math.ceil(p.series * p.parallel * structurecost / s.cost * 100)
+            };
+            s.rankpc = {
+                pvkw : Math.ceil(s.panel.totalkw * 100 / pvkwreq),
+                maxload : Math.ceil(s.maxload * 100/ inputs.loadmax),
+                output : Math.ceil(s.panel.totalkw * i.solarefficiency / 100 * unitperkw / 1000 / inputs.dailyunits * 100)
+            };
+            s.value = s.rankpc.pvkw * s.rankpc.output / ( 1000000 * s.panel.diffcat);
+            i.solutions.push(s);
+            summary.push(s);
+        });
+
+        i.solutions.sort(function(a,b){
+            return a.cost - b.cost;
+        });
+
+        if(i.solutions.length){
+            final.push(i);
+        }
+    });
+    
+    // Get Ranks
+    //      By cost
+    var costs = summary.map(function(a){ return a.cost;}).sort(function(a,b){ return a-b; });
+    
+    // Save ranks
+    summary.forEach(function(s){ 
+        s.ranks.cost = costs.indexOf(s.cost)+1; 
+        s.ranks.valueformoney = s.cost / s.value;
+        s.rank = s.ranks.valueformoney;
+    });
+    
+    summary.sort(function(a,b){
+        return a.rank - b.rank;
+    });
+    
+    var filtered = [], lastvalue = 0, lastprice = 0;
+    summary.forEach(function(s){
+        if(!lastvalue || !lastprice){
+            lastvalue = s.value;
+            lastprice = s.cost;
+            return filtered.push(s);
+        }
+        if(s.value > lastvalue || s.cost < lastprice){
+            lastvalue  = Math.max(lastvalue,s.value);
+            lastprice  = Math.min(lastprice,s.cost);
+            filtered.push(s);
+        }
+    });
+
+    fs.writeFileSync("results/solutions.json",JSON.stringify(final,1,4));
+    fs.writeFileSync("results/summary.json",JSON.stringify(summary,1,4)); 
+    fs.writeFileSync("results/filtered.json",JSON.stringify(filtered,1,4)); 
     
     return inputs.filter ? filtered : summary;
 };
