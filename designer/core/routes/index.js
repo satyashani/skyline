@@ -13,7 +13,8 @@ var design = function(req,res){
         "dailyunits" : req.body.dailyunits || 12,
         "backupkw" : req.body.backupkw || 500,
         "backuphrs" : req.body.backuphrs || 6,
-        "loadmax" : req.body.loadmax || 3000
+        "loadmax" : req.body.loadmax || 3000,
+        "filter" : req.body.filter
     };
     var summary = designer.design(inputs);
     res.json(summary);

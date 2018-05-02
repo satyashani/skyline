@@ -67,12 +67,17 @@ app.controller("designer",['$scope', 'view','$http',function($scope, view,$http)
     $scope.types = {
         offgrid : "Off-Grid", ongrid : "On-Grid", hybrid : "Hybrid"
     };
+    $scope.sortkeys = {
+        cost : 'Price', valueformoney : "Value for Money"
+    };
+    $scope.sortkey = 'valueformoney';
     $scope.inputs = {
         "type" : "offgrid",
         "dailyunits" : 12,
         "backupkw" : 500,
         "backuphrs" : 6,
-        "loadmax" : 3000
+        "loadmax" : 3000,
+        "filter" : true
     };
     
     $scope.results = [];
@@ -80,6 +85,14 @@ app.controller("designer",['$scope', 'view','$http',function($scope, view,$http)
     $scope.design = function(){
         $http(api.design($scope.inputs)).then(function(res){
             $scope.results = res.data;
+            $scope.sort();
+        });
+    };
+    
+    $scope.sort = function(){
+        console.log("sorting by",$scope.sortkey);
+        $scope.results.sort(function(a,b){
+            return a.ranks[$scope.sortkey] - b.ranks[$scope.sortkey];
         });
     };
 }]);

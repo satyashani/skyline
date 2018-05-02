@@ -22,67 +22,144 @@
                 </div>
             </form>
         </div>
+        <div class="col-lg-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="form-label">Use Filter</label>
+                    <input type="checkbox" name="filter" ng-model="inputs.filter" class="form-control"/>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="row">
-        <div class="col-lg-12" style="padding-top: 10px;" ng-if="results.length">
+        <div class="col-lg-9" style="padding-top: 10px;" ng-show="results.length">
             <h3>Results</h3>
-            <table class="table-bordered table-striped" >
-                <thead>
-                    <tr>
-                        <th style="padding: 0px 20px 0px 20px;">Inverter</th>
-                        <th style="padding: 0px 20px 0px 20px;">Panels</th>
-                        <th style="padding: 0px 20px 0px 20px;">Batteries</th>
-                        <th style="padding: 0px 20px 0px 20px;">Cost</th>
-                        <th style="padding: 0px 20px 0px 20px;">Value</th>
-                        <th style="padding: 0px 20px 0px 20px;">Cost Ratio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="r in results">
-                        <td style="padding: 0px 20px 0px 20px;">
-                            {{ r.inverter }}
-                        </td>
-                        <td style="padding: 0px 20px 0px 20px;">
-                            <div>
-                                Panel - {{ r.panel.totalkw }}kW
+            <div class="row">
+                <div class="col-lg-2 pull-right">
+                    <select name="sortkey" ng-model="sortkey" class="form-control"  ng-options="key as value for (key,value) in sortkeys" ng-change="sort()"></select>
+                </div>
+            </div>
+            <div class="row well"  ng-repeat="r in results">
+                
+                <div class="col-lg-5">
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                            <span class="panel-title" style=" font-size: 12px;">Inverter</span> 
+                        </div> 
+                        <div class="panel-body"> 
+                            <div class="col-lg-7">
+                                <b>{{ r.inverter }}</b>
+                                <table style="margin-top: 10px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>Max Load :</td><td>{{ r.maxload / 1000 }}kW</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Solar Panel :</td><td>{{ r.maxpv / 1000 }}kW</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div> Model - {{ r.panel.name }}</div>
+                            <div class="col-lg-5">
+                                <a href="#" class="thumbnail">
+                                    <img src="/image/{{r.inverter}}.jpg" alt="No Image" height="100" style="min-height: 125px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-12">
+                        Value : {{ r.value }} | Value For Money : {{ r.ranks.valueformoney }}
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                            <span class="panel-title" style=" font-size: 12px;">Solar Panels</span> 
+                        </div> 
+                        <div class="panel-body"> 
+                            <div>{{ r.panel.series * r.panel.parallel }} x {{ r.panel.name }} | <b>{{ r.panel.totalkw }}W</b></div>
                             <small>
-                                Series - {{ r.panel.series }} |
-                                Parallel - {{ r.panel.parallel }}
+                                Array - {{ r.panel.series }} x {{ r.panel.parallel }}
                             </small>
-                        </td>
-                        <td style="padding: 0px 20px 0px 20px;">
-                            <div>
-                                Capacity - {{ r.battery.totalah }}AH
-                            </div>
-                            <div>
-                                {{ r.battery.name }}
-                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="panel panel-success">
+                        <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                            <span class="panel-title" style=" font-size: 12px;">Battery</span> 
+                        </div> 
+                        <div class="panel-body"> 
+                            <div>{{ r.battery.series * r.battery.parallel }} x {{ r.battery.name }} | <b>{{ r.battery.totalah }}AH</b></div>
                             <small>
-                                Series - {{ r.battery.series }} |
-                                Parallel - {{ r.battery.parallel }}
+                                Array - {{ r.battery.series }} x {{ r.battery.parallel }}
                             </small>
-                        </td>
-                        <td style="padding: 0px 20px 0px 20px;">
-                            <div>Rs. {{ r.cost }}/-</div>
-                            <small>Tax : Rs. {{ r.tax }}/-</small>
-                        </td>
-                        <td style="padding: 0px 20px 0px 20px;">
-                            <div> Panel Capacity : {{r.rankpc.pvkw}}%</div>
-                            <div> Battery Capacity : {{r.rankpc.ah}}%</div>
-                            <div> Peak Load : {{r.rankpc.maxload}}%</div>
-                            <div> Output : {{r.rankpc.output}}%</div>
-                        </td>
-                        <td style="padding: 0px 20px 0px 20px;">
-                            <div> Panel : {{r.costpc.panel}}%</div>
-                            <div> Battery : {{r.costpc.battery}}%</div>
-                            <div> Inverter : {{r.costpc.inverter}}%</div>
-                            <div> Structure : {{r.costpc.structure}}%</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    
+                    <div class="col-lg-12">
+                        <span class="label label-primary">
+                            Value :
+                        </span>
+                        <div class="progress value">
+                            <div ng-if="r.rankpc.pvkw <= 100" class="progress-bar progress-bar-success" style="width: {{r.rankpc.pvkw}}%;">
+                              Panel Capacity
+                            </div>
+                            <div ng-if="r.rankpc.pvkw > 100" class="progress-bar progress-bar-success" style="width: {{10000/r.rankpc.pvkw}}%;">
+                              Panel Capacity
+                            </div>
+                            <div ng-if="r.rankpc.pvkw > 100" class="progress-bar progress-bar-info" style="width: {{(1 - 100/r.rankpc.pvkw)*100 }}%;">
+                              
+                            </div>
+                        </div>
+                        <div class="progress value">
+                            <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.ah}}%;">
+                              Battery Capacity
+                            </div>
+                        </div>
+                        <div class="progress value">
+                            <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.maxload}}%;">
+                              Peak Load
+                            </div>
+                        </div>
+                        <div class="progress value">
+                            <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.output}}%;">
+                              Output
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12"  style="margin-top: 15px;">
+                        <span class="label label-primary" >
+                            Cost Share :
+                        </span>
+                        
+                        <div class="progress value">
+                            <div class="progress-bar progress-bar-success" style="width: {{r.costpc.panel}}%;">
+                               Panel
+                            </div>
+                            <div class="progress-bar progress-bar-warning" style="width: {{r.costpc.battery}}%;">
+                               Battery
+                            </div>
+                            <div class="progress-bar progress-bar-danger" style="width: {{r.costpc.inverter}}%;">
+                               Inverter
+                            </div>
+                            <div class="progress-bar progress-bar-warning-striped" style="width: {{r.costpc.structure}}%;">
+                               Structure
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-12" style="margin-top: 15px;">
+                        <div class="btn btn-primary col-lg-12">
+                            <b> Rs. {{ r.cost }}/-</b>
+                            <small>(Tax Included : Rs. {{ r.tax }}/-)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -162,6 +162,7 @@ exports.design = function(inputs){
                     maxload : Math.ceil(s.maxload * 100/ inputs.loadmax),
                     output : Math.ceil(s.panel.totalkw * i.solarefficiency / 100 * unitperkw / 1000 / inputs.dailyunits * 100)
                 };
+                s.value = s.rankpc.ah * s.rankpc.pvkw * s.rankpc.output / ( 1000000 * s.panel.diffcat * s.battery.diffcat);
                 i.solutions.push(s);
                 summary.push(s);
             });
@@ -179,85 +180,35 @@ exports.design = function(inputs){
     // Get Ranks
     //      By cost
     var costs = summary.map(function(a){ return a.cost;}).sort(function(a,b){ return a-b; });
-    //      By panel power
-    var panelsize = [];
-    summary.forEach(function(a){
-        if(panelsize.indexOf(a.panel.power) === -1)
-            panelsize.push(a.panel.power);
-    });
-    panelsize.sort(function(a,b){ return b-a;});
-    //      By ah size
-    var batterysize = [];
-    summary.forEach(function(a){
-        if(batterysize.indexOf(a.battery.ah) === -1)
-            batterysize.push(a.battery.ah);
-    });
-    batterysize.sort(function(a,b){ return b-a;});
-    //      By kw
-    var kw = [];
-    summary.forEach(function(a){
-        if(kw.indexOf(a.panel.totalkw) === -1)
-            kw.push(a.panel.totalkw);
-    });
-    kw.sort(function(a,b){ return b-a;});
-    //      By ah
-    var ah = [];
-    summary.forEach(function(a){
-        if(ah.indexOf(a.battery.totalah) === -1)
-            ah.push(a.battery.totalah);
-    });
-    ah.sort(function(a,b){ return b-a;});
-    //      By pvmatch
-    var pvdiff = [];
-    summary.forEach(function(a){
-        if(pvdiff.indexOf(a.panel.diff) === -1)
-            pvdiff.push(a.panel.diff);
-    });
-    pvdiff.sort(function(a,b){ return a-b;});
-    //      By ahmatch
-    var ahdiff = [];
-    summary.forEach(function(a){
-        if(ahdiff.indexOf(a.battery.diff) === -1)
-            ahdiff.push(a.battery.diff);
-    });
-    ahdiff.sort(function(a,b){ return a-b;});
-    //      By max load
-    var maxloads = [];
-    summary.forEach(function(a){
-        if(maxloads.indexOf(a.maxload) === -1)
-            maxloads.push(a.maxload);
-    });
-    maxloads.sort(function(a,b){ return a-b;});
-    //      By max pv
-    var maxpv = [];
-    summary.forEach(function(a){
-        if(maxpv.indexOf(a.maxpv) === -1)
-            maxpv.push(a.maxpv);
-    });
-    maxpv.sort(function(a,b){ return a-b;});
     
     // Save ranks
     summary.forEach(function(s){ 
         s.ranks.cost = costs.indexOf(s.cost)+1; 
-        s.ranks.panel = panelsize.indexOf(s.panel.power)+1; 
-        s.ranks.battery = batterysize.indexOf(s.battery.ah)+1; 
-        s.ranks.kw = kw.indexOf(s.panel.totalkw)+1; 
-        s.ranks.pvmatch = pvdiff.indexOf(s.panel.diff)+1; 
-        s.ranks.ahmatch = ahdiff.indexOf(s.battery.diff)+1; 
-        s.ranks.load = maxloads.indexOf(s.maxload)+1;
-        s.ranks.maxpv = maxpv.indexOf(s.maxpv)+1;
-        s.ranks.ah = ah.indexOf(s.battery.totalah) + 1;
-        s.rank = ( s.ranks.cost * 2 + s.ranks.panel * 1 + s.ranks.battery * 1 + s.ranks.kw * 2 + s.ranks.ah * 2 +
-                   s.ranks.load * 0.5 + s.ranks.maxpv * 0.5 + s.ranks.pvmatch * 0.5 + s.ranks.ahmatch * 0.5 ) / 9;
-        
+        s.ranks.valueformoney = s.cost / s.value;
+        s.rank = s.ranks.valueformoney;
     });
     
     summary.sort(function(a,b){
         return a.rank - b.rank;
     });
+    
+    var filtered = [], lastvalue = 0, lastprice = 0;
+    summary.forEach(function(s){
+        if(!lastvalue || !lastprice){
+            lastvalue = s.value;
+            lastprice = s.cost;
+            return filtered.push(s);
+        }
+        if(s.value > lastvalue || s.cost < lastprice){
+            lastvalue  = Math.max(lastvalue,s.value);
+            lastprice  = Math.min(lastprice,s.cost);
+            filtered.push(s);
+        }
+    });
 
     fs.writeFileSync("results/solutions.json",JSON.stringify(final,1,4));
     fs.writeFileSync("results/summary.json",JSON.stringify(summary,1,4)); 
+    fs.writeFileSync("results/filtered.json",JSON.stringify(summary,1,4)); 
     
-    return summary;
+    return inputs.filter ? filtered : summary;
 };
