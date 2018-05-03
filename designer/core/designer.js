@@ -20,13 +20,13 @@ var diffcat = function(diff,val){
     }else return 4;
 };
 
-var inputs = {
-    "type" : "offgrid",
-    "dailyunits" : 12,
-    "backupkw" : 500,
-    "backuphrs" : 6,
-    "loadmax" : 3000
-};
+//var inputs = {
+//    "type" : "offgrid",
+//    "dailyunits" : 12,
+//    "backupkw" : 500,
+//    "backuphrs" : 6,
+//    "loadmax" : 3000
+//};
 
 var structurecost = 500; // Per panel
 
@@ -162,7 +162,7 @@ var offGridHybrid = function(inputs){
                     maxload : Math.ceil(s.maxload * 100/ inputs.loadmax),
                     output : Math.ceil(s.panel.totalkw * i.solarefficiency / 100 * unitperkw / 1000 / inputs.dailyunits * 100)
                 };
-                s.value = s.rankpc.ah * s.rankpc.pvkw * s.rankpc.output / ( 1000000 * s.panel.diffcat * s.battery.diffcat);
+                s.value = (s.rankpc.ah + s.rankpc.pvkw + s.rankpc.output) / ( 300 );
                 i.solutions.push(s);
                 summary.push(s);
             });
@@ -192,16 +192,17 @@ var offGridHybrid = function(inputs){
         return a.rank - b.rank;
     });
     
-    var filtered = [], lastvalue = 0, lastprice = 0;
+    var filtered = [], bestmatchvalue = 0, bestmatchprice = 0;
     summary.forEach(function(s){
-        if(!lastvalue || !lastprice){
-            lastvalue = s.value;
-            lastprice = s.cost;
+        if(!bestmatchvalue || !bestmatchprice){
+            bestmatchvalue = s.value;
+            bestmatchprice = s.cost;
             return filtered.push(s);
         }
-        if(s.value > lastvalue || s.cost < lastprice){
-            lastvalue  = Math.max(lastvalue,s.value);
-            lastprice  = Math.min(lastprice,s.cost);
+        
+        if(s.value > bestmatchvalue && s.cost > bestmatchprice && s.value < 1.3 * bestmatchvalue){
+            filtered.push(s);
+        }else if(s.value < bestmatchvalue && s.cost < bestmatchprice && s.value > 0.7 * bestmatchvalue){
             filtered.push(s);
         }
     });
@@ -313,7 +314,7 @@ exports.ongrid = function(inputs){
                 maxload : Math.ceil(s.maxload * 100/ inputs.loadmax),
                 output : Math.ceil(s.panel.totalkw * i.solarefficiency / 100 * unitperkw / 1000 / inputs.dailyunits * 100)
             };
-            s.value = s.rankpc.pvkw * s.rankpc.output / ( 1000000 * s.panel.diffcat);
+            s.value = s.rankpc.pvkw * s.rankpc.output / ( 10000 * s.panel.diffcat);
             i.solutions.push(s);
             summary.push(s);
         });

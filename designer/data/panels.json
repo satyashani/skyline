@@ -30,6 +30,21 @@
         "maxsysv" : 1000
     },
     {
+        "name" : "UTL-150",
+        "brand" : "UTL",
+        "power" : 150,
+        "voc" : 21.6,
+        "vmax" : 18,
+        "isc" : 8.6,
+        "imax" : 8.01,
+        "cells" : 36,
+        "price" : 45,
+        "tax" : 5,
+        "maxdiscount" : 10,
+        "minorder" : 300,
+        "maxsysv" : 600
+    },
+    {
         "name" : "UTL-250",
         "brand" : "UTL",
         "power" : 250,

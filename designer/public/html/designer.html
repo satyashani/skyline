@@ -2,32 +2,27 @@
     <div class="row">
         <div class="col-lg-12">
             <form class="form-inline">
-                <div class="form-group">
-                    <select name="type" ng-model="inputs.type" class="form-control"  ng-options="key as value for (key,value) in types"></select>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="dailyunits" ng-model="inputs.dailyunits" class="form-control" placeholder="Daily Units"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="backupkw" ng-model="inputs.backupkw" class="form-control" placeholder="Back up Load (Watt)"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="backuphrs" ng-model="inputs.backuphrs" class="form-control" placeholder="Backup Hours"/>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="loadmax" ng-model="inputs.loadmax" class="form-control" placeholder="Max Load(Watt)"/>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary" type="submit" ng-click="design()" >Design</button>
-                </div>
+                <label style="width: 150px;" for="type">System Type</label>
+                <select style="width: 150px;" id="type" ng-model="inputs.type" class="form-control"  ng-options="key as value for (key,value) in types"></select>
+                <label style="margin-left: 20px;width: 180px;" for="dailyunits">Daily Units Required</label>
+                <input style="width: 80px;" type="text" id="dailyunits" ng-model="inputs.dailyunits" class="form-control" placeholder="Units / kWh"/>
             </form>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="margin-top: 10px;" ng-if="inputs.type!=='ongrid'">
             <form class="form-inline">
-                <div class="form-group">
-                    <label class="form-label">Use Filter</label>
-                    <input type="checkbox" name="filter" ng-model="inputs.filter" class="form-control"/>
-                </div>
+                <label style="width: 150px;" for="backuphrs">Backup Duration</label>
+                <input style="width: 150px;" type="text" id="backuphrs" ng-model="inputs.backuphrs" class="form-control" placeholder="Hours"/>
+                <label style="margin-left: 20px;width: 180px;" for="backupkw">Load During Power-Cut</label>
+                <input style="width: 80px;" type="text" id="backupkw" ng-model="inputs.backupkw" class="form-control" placeholder="Watt"/>
+            </form>
+        </div>
+        <div class="col-lg-12" style="margin-top: 10px;">
+            <form class="form-inline">
+                <label style="width: 150px;" for="loadmax">Maximum Load</label>
+                <input style="width: 150px;" type="text" id="loadmax" ng-model="inputs.loadmax" class="form-control" placeholder="Watt"/>
+                <label style="margin-left: 20px;width: 100px;" class="form-label">Use Filter</label>
+                <input type="checkbox" id="filter" ng-model="inputs.filter" />
+                <button style="width: 120px; margin-left: 20px;" class="btn btn-primary" type="submit" ng-click="design()" >Design</button>
             </form>
         </div>
     </div>
@@ -43,7 +38,14 @@
                 </div>
             </div>
             <div class="row well"  ng-repeat="r in results">
-                
+                <div class="col-lg-12">
+                    <h4 ng-if="inputs.type === 'ongrid'">
+                        {{r.panel.totalkw / 1000 }}kW On-Grid Solar System
+                    </h4>
+                    <h4 ng-if="inputs.type === 'offgrid'">
+                        {{r.panel.totalkw / 1000 }}kW Off-Grid Solar With {{ r.battery.totalah }}AH Battery
+                    </h4>
+                </div>
                 <div class="col-lg-5">
                     <div class="panel panel-success">
                         <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
