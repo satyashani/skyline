@@ -1,0 +1,36 @@
+{
+    "front": {
+        "port": 3001,
+        "cookieDays" : 2,
+        "sitename" : "Localhost",
+        "siteFQDN" : "localhost:3001"
+    },
+    "ssl": {
+        "enable": false,
+        "key": "./server.key",
+        "cert": "./server.crt"
+    },
+    "logging" : {
+        "logLevel" : "info"
+    },
+    "pg": {
+        "pghost": "localhost",
+        "pgport": "5432",
+        "pgrole": "xadmin",
+        "pgdb": "postgres",
+        "pgpass": "rewq12",
+        "pgschema": "skyline"
+    },
+    "aws": {
+        "bucket": "mr-xadmin-rawdata-use1-dev",
+        "accountId": "978599919695",
+        "region": "us-east-1",
+        "SNSTopic" : "Test"
+    },
+    "email": {
+        "mode": "gmail",
+        "gmailuser": "xrf@nxgened.com",
+        "gmailpassword": "Sa5hA!2#4",
+        "from": "xadmin"
+    }
+}

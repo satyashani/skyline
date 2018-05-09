@@ -1,0 +1,79 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ * Author           shani
+ * Created          8 May, 2018
+ */
+
+CREATE TABLE inverters (
+    name            varchar(100),
+    brand           varchar(30),
+    power           integer,
+    phase           integer,
+    systemtype      varchar(10),
+    pvkwmax         integer,
+    pvkwmin         integer,
+    pvvlow          integer,
+    pvvhigh         integer,
+    pvvmax          integer,
+    chargertype     varchar(20),
+    batteryv        integer,
+    loadkwmax       integer,
+    surgekwmax      integer,
+    warranty        integer,
+    maxchargecurrent    integer,
+    solarefficiency     integer,
+    inverterefficieicy  integer,
+    pvseries        integer,
+    price           integer,
+    maxdiscount     integer,
+    tax             integer,
+    combotax        integer,
+    isstring        boolean
+);
+
+CREATE TABLE batteries (
+    name          varchar(100),
+    brand         varchar(100),
+    warranty      integer,
+    ah            integer,
+    v             integer,
+    price         integer,
+    tax           integer,
+    combotax      integer,
+    maxdiscount   integer
+);
+
+CREATE TABLE panels (
+    name            varchar(100),
+    brand           varchar(20),
+    power           integer,
+    voc             float,
+    vmax            float,
+    isc             float,
+    imax            float,
+    cells           float,
+    price           integer,
+    tax             integer,
+    maxdiscount     integer,
+    minorder        integer,
+    maxsysv         integer
+);
+
+CREATE VIEW products AS
+    SELECT name, brand , price, maxdiscount, tax, 
+        '{ power : ' || power || ' , voc : ' || voc || ', isc : ' || isc || ' } '  as props FROM panels
+    UNION
+    SELECT name, brand , price, maxdiscount, tax, 
+        '{ ah : ' || ah || ' , v : ' || v || ' } '  as props FROM batteries
+    UNION
+    SELECT name, brand , price, maxdiscount, tax, 
+        '{ power : ' || power || ' , phase : ' || phase || ', systemtype : ' || systemtype ||
+                ', pvkwmax : ' || pvkwmax || ' , pvv : [' || pvvlow || ',' || pvvhigh || '], chargertype : ' || chargertype ||
+                ', loadkwmax : ' || loadkwmax || ' , surgekwmax : ' || surgekwmax || ', solarefficiency : ' || solarefficiency || 
+                ', inverterefficieicy : ' || inverterefficieicy || ' , pvseries : ' || pvseries || ' } '  as props FROM inverters;
+
+        

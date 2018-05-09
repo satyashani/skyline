@@ -11,11 +11,11 @@ var inverters = require("../data/inverters"),
     panels = require("../data/panels");
     
 var diffcat = function(diff,val){
-    if(diff / val < 0.15){
+    if(diff / val < 0.25){
         return 1;
-    }else if(diff / val < 0.25){
+    }else if(diff / val < 0.40){
         return 2;
-    }else if(diff / val < 0.35){
+    }else if(diff / val < 0.55){
         return 3;
     }else return 4;
 };
@@ -139,11 +139,11 @@ var offGridHybrid = function(inputs){
                         totalah : b.totalah, diff : Math.abs(b.totalah - bahreq) , brand : b.battery.brand,
                         diffcat : diffcat(Math.abs(b.totalah - bahreq),bahreq)
                     },
-                    cost : i.mrp * (1+(iscombo ? i.combotax : i.tax)/100) + 
+                    cost : i.price * (1+(iscombo ? i.combotax : i.tax)/100) + 
                            p.totalkw * p.panel.price * (1+ p.panel.tax/100) + 
                            b.series * b.parallel * b.battery.price * (1+ (iscombo ? b.battery.combotax : b.battery.tax)/100) +
                            p.series * p.parallel * structurecost,
-                    tax : i.mrp * (iscombo ? i.combotax : i.tax)/100 + 
+                    tax : i.price * (iscombo ? i.combotax : i.tax)/100 + 
                            p.totalkw * p.panel.price *  p.panel.tax/100 + 
                            b.series * b.parallel * b.battery.price * (iscombo ? b.battery.combotax : b.battery.tax)/100,
                     ranks : {
@@ -153,7 +153,7 @@ var offGridHybrid = function(inputs){
                 s.costpc = {
                     panel : Math.ceil(p.totalkw * p.panel.price * (1+ p.panel.tax/100) / s.cost * 100),
                     battery : Math.ceil(b.series * b.parallel * b.battery.price * (1+ (iscombo ? b.battery.combotax : b.battery.tax)/100) / s.cost * 100),
-                    inverter : Math.ceil(i.mrp * (1+(iscombo ? i.combotax : i.tax)/100) / s.cost * 100),
+                    inverter : Math.ceil(i.price * (1+(iscombo ? i.combotax : i.tax)/100) / s.cost * 100),
                     structure : Math.ceil(p.series * p.parallel * structurecost / s.cost * 100)
                 };
                 s.rankpc = {
@@ -295,10 +295,10 @@ exports.ongrid = function(inputs){
                     totalkw : p.totalkw, diff : Math.abs(p.totalkw - pvkwreq) , brand : p.panel.brand,
                     diffcat : diffcat( Math.abs(p.totalkw - pvkwreq),pvkwreq)
                 },
-                cost : i.mrp * (1+ i.tax/100) + 
+                cost : i.price * (1+ i.tax/100) + 
                        p.totalkw * p.panel.price * (1+ p.panel.tax/100) + 
                        p.series * p.parallel * structurecost,
-                tax : i.mrp * i.tax/100 + 
+                tax : i.price * i.tax/100 + 
                        p.totalkw * p.panel.price *  p.panel.tax/100,
                 ranks : {
                     cost : 0, panel : 0, kw : 0, pvmatch : 0, load : 0, maxpv : 0
@@ -306,7 +306,7 @@ exports.ongrid = function(inputs){
             };
             s.costpc = {
                 panel : Math.ceil(p.totalkw * p.panel.price * (1+ p.panel.tax/100) / s.cost * 100),
-                inverter : Math.ceil(i.mrp * (1+i.tax/100) / s.cost * 100),
+                inverter : Math.ceil(i.price * (1+i.tax/100) / s.cost * 100),
                 structure : Math.ceil(p.series * p.parallel * structurecost / s.cost * 100)
             };
             s.rankpc = {
