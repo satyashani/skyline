@@ -64,16 +64,16 @@ CREATE TABLE panels (
 );
 
 CREATE VIEW products AS
-    SELECT name, brand , price, maxdiscount, tax, 
-        '{ power : ' || power || ' , voc : ' || voc || ', isc : ' || isc || ' } '  as props FROM panels
+    SELECT 'panel'  as type ,name, brand , price, maxdiscount, tax, 
+        '{ "power" : ' || power || ' , "voc" : ' || voc || ', "isc" : ' || isc || ' } '  as props FROM panels
     UNION
-    SELECT name, brand , price, maxdiscount, tax, 
-        '{ ah : ' || ah || ' , v : ' || v || ' } '  as props FROM batteries
+    SELECT 'battery'  as type , name, brand , price, maxdiscount, tax, 
+        '{ "ah" : ' || ah || ' , "v" : ' || v || ' } '  as props FROM batteries
     UNION
-    SELECT name, brand , price, maxdiscount, tax, 
-        '{ power : ' || power || ' , phase : ' || phase || ', systemtype : ' || systemtype ||
-                ', pvkwmax : ' || pvkwmax || ' , pvv : [' || pvvlow || ',' || pvvhigh || '], chargertype : ' || chargertype ||
-                ', loadkwmax : ' || loadkwmax || ' , surgekwmax : ' || surgekwmax || ', solarefficiency : ' || solarefficiency || 
-                ', inverterefficieicy : ' || inverterefficieicy || ' , pvseries : ' || pvseries || ' } '  as props FROM inverters;
+    SELECT 'inverter'  as type, name, brand , price, maxdiscount, tax, 
+        '{ "power" : ' || power || ' , "phase" : ' || phase || ', "systemtype" : ' || systemtype ||
+                ', "pvkwmax" : ' || pvkwmax || ' , "pvv" : [' || pvvlow || ',' || pvvhigh || '], "chargertype" : ' || chargertype ||
+                ', "loadkwmax" : ' || loadkwmax || ' , "surgekwmax" : ' || surgekwmax || ', "solarefficiency" : ' || solarefficiency || 
+                ', "inverterefficieicy" : ' || inverterefficieicy || ' , "pvseries" : ' || pvseries || ' } '  as props FROM inverters;
 
         

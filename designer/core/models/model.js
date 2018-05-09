@@ -79,6 +79,18 @@ class Model {
         return null;
     }
     
+    /**
+     * Example of condition objects -
+     * { prop : { eq : value } }
+     * { prop : { like : value } }
+     * { prop1 : {eq : value } , prop2 : { eq : value } }
+     * { prop1 : {eq : value } , prop2 : { eq : value }, join : 'AND' }
+     * { prop1 : {eq : value } , join : 'AND' , sub : {prop1 : {gt : value } , prop2 : { lt : value }, join : "OR" } }
+     * 
+     * @param {Object} cond
+     * @param {integer} posstart
+     * @returns {nm$_model.Model.getCond.modelAnonym$1|nm$_model.Model.getCond.modelAnonym$0}
+     */
     getCond (cond,posstart){
         cond.join = cond.join || "AND";
         let list = [], params = [], pos = posstart || 1;

@@ -5,7 +5,20 @@
  * *************************************************************** */
 
 
+var models = require("../models/");
 var designer = require("../designer");
+
+var products = function(req,res){
+    var q = {
+        name : { like : req.query.q }
+    };
+    if(req.params.type){
+        q.type = { eq : req.params.type };
+    }
+    models.products.find(q,function(err,p){
+        res.json({ok : !err, data : p, error : err ? err.message : null});
+    });
+};
 
 var design = function(req,res){
     var inputs = {
@@ -30,4 +43,6 @@ var design = function(req,res){
 
 exports.addRoutes = function(app){
     app.post("/design",design);
+    app.get("/products",products);
+    app.get("/products/:type",products);
 };
