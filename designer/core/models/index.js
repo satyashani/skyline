@@ -8,5 +8,5 @@ module.exports = {
     inverters : require("./inverters"),
     batteries : require("./battery"),
     panels : require("./panels"),
-    products : rqeuire("./products")
+    products : require("./products")
 };

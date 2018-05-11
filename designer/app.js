@@ -21,6 +21,7 @@ var router = require("./core/routes/");
 
 // all environments
 app.set('port', 3000);
+app.set('views', './public/ejs');
 app.enable('strict routing');
 app.use(express.static(path.join(__dirname, 'public'),{ maxAge: 31557600000 }));
 app.use(bodyParser.json());

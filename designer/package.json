@@ -10,6 +10,7 @@
     "body-parser": "1.8.1",
     "compression":"1.1.0",
     "pg": "7.4.0",
-    "async" : "*"
+    "async" : "*",
+    "ejs" : "2.6.1"
   }
 }

@@ -7,6 +7,7 @@
 
 var models = require("../models/");
 var designer = require("../designer");
+var page = require("../page");
 
 var products = function(req,res){
     var q = {
@@ -40,9 +41,18 @@ var design = function(req,res){
     res.json(summary);
 };
 
+var home = function(req,res){
+    var html = page.render(page.templates.jumbo,{});
+    html += page.render(page.templates.achievements,{});
+    html += page.render(page.templates.gallery,{});
+    var view = page.getView();
+    res.send( view.content(html).index() );
+};
+
 
 exports.addRoutes = function(app){
     app.post("/design",design);
     app.get("/products",products);
     app.get("/products/:type",products);
+    app.get("/",home);
 };
