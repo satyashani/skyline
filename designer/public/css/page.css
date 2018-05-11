@@ -86,7 +86,7 @@ and open the template in the editor.
 
 .homebox{
     margin-top: 20px;
-    padding: 20px 0px 20px 0px;
+    padding: 10px;
     background-color: white;
     border-radius: 2px;
     border-top: 1px solid #eaeaea;
@@ -98,4 +98,83 @@ and open the template in the editor.
     padding-top: 30px;
     padding-bottom: 30px;
     background: black;
+}
+
+.product {
+    position: relative; width: 25%; float : left; margin-bottom: 40px;
+}
+
+.product{
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.product a{
+    position: relative; display: block; text-decoration: none;
+}
+
+.product a.title{
+    padding: 5px 0;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+}
+.product div.subtitle{
+    color: #878787;
+    font-size: 12px;
+    padding-bottom: 5px;
+    word-wrap: break-word;
+    text-align: center;
+}
+.product a.price{
+    display: block;
+    padding: 0 10px 0 0;
+    margin: 3px 0;
+    text-align: center;
+}
+.product a.price .actual{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+}
+.product a.price .tagged{
+    text-decoration: line-through;
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #878787;
+}
+.product a.price .off{
+    display: inline-block;
+    margin-left: 8px;
+    color: #388e3c;
+    font-size: 13px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+.product div.imagecontainer{
+    position: relative;
+    color: #878787;
+    font-size: 12px;
+    padding-bottom: 5px;
+    word-wrap: break-word;
+    margin: 0 auto;
+}
+
+.product div.imagecontainer img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }

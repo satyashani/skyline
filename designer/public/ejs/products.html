@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="col-lg-2 col-lg-offset-1 homebox">
+        <b>Filters</b>
+        <hr />
+    </div>
+    
+    <div class="col-lg-8 homebox" style="margin-left: 20px; margin-bottom: 20px;">
+        <b>Showing products 1-50 of 500</b>
+        <hr />
+        
+        <% products.forEach(function(p){ %>
+        <div class="product">
+            <a class="focus" target="_blank" href="/sex-i">
+                <div>
+                    <div>
+                        <div class="imagecontainer" style="height: 280px; width: 200px;">
+                            <img class="_1Nyybr  _30XEf0" alt="<%- p.name %>" src="/img/product/<%- p.name %>.jpg">
+                        </div> 
+                    </div> 
+                </div>
+            </a>
+            <a class="title" title="<%- p.name %>" target="_blank" href="/e">
+                <%- p.name %>
+            </a>
+            <div class="subtitle"><%- p.brand %></div>
+            <a class="price" target="_blank" href="/6de">
+                <div class="_1uv9Cb">
+                    <div class="actual">₹<%- p.price %></div>
+                    <div class="tagged">₹<%- p.price %></div>
+                    <div class="off">0% off</div> 
+                </div> 
+            </a> 
+        </div>
+        <% }) %>
+    </div>
+</div>

@@ -7,19 +7,9 @@
 var ejs = require("ejs");
 var fs = require("fs");
 var path = require("path");
+var async = require("async");
 
-var files = {
-    achievements : fs.readFileSync("./public/ejs/achievements.html",{encoding : "utf8"}),
-    contents : fs.readFileSync("./public/ejs/contents.html",{encoding : "utf8"}),
-    footer : fs.readFileSync("./public/ejs/footer.html",{encoding : "utf8"}), 
-    gallery : fs.readFileSync("./public/ejs/gallery.html",{encoding : "utf8"}), 
-    jumbo : fs.readFileSync("./public/ejs/jumbo.html",{encoding : "utf8"}), 
-    mainmenu : fs.readFileSync("./public/ejs/mainmenu.html",{encoding : "utf8"}), 
-    products : fs.readFileSync("./public/ejs/products.html",{encoding : "utf8"}), 
-    sidebar : fs.readFileSync("./public/ejs/sidebar.html",{encoding : "utf8"}), 
-    titlebar : fs.readFileSync("./public/ejs/titlebar.html",{encoding : "utf8"}),
-    index : fs.readFileSync("./public/ejs/index.html",{encoding : "utf8"})
-};
+var files = {};
 
 var templates = {
     achievements : "achievements",
@@ -35,12 +25,22 @@ var templates = {
 };
 exports.templates = templates;
 
+var loadTemplate = function(t){
+    files[t] = fs.readFileSync("./public/ejs/"+t+".html",{encoding : "utf8"});
+};
+
+async.each(Object.keys(templates),function(t,cb){
+    loadTemplate(t);
+    cb();
+});
+
 ejs.fileLoader = function(name){
     var p = path.resolve("./public/ejs/"+name+".html");
     return fs.readFileSync(p,{encoding : 'utf8'});
 };
 
 var render = function(tpl,data){
+    loadTemplate(tpl);
     return ejs.render(files[tpl],data || {});
 };
 exports.render = render;

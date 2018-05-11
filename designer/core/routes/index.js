@@ -10,14 +10,21 @@ var designer = require("../designer");
 var page = require("../page");
 
 var products = function(req,res){
-    var q = {
-        name : { like : req.query.q }
-    };
+    var q = {};
+    if(req.query.q){
+        q.name = { like : '%'+req.query.q+'%' };
+    }
     if(req.params.type){
         q.type = { eq : req.params.type };
     }
     models.products.find(q,function(err,p){
-        res.json({ok : !err, data : p, error : err ? err.message : null});
+        if(req.is("json")){
+            res.json({ok : !err, data : p, error : err ? err.message : null});
+        }else{
+            var view = page.getView();
+            view.content(page.render(page.templates.products,{ products : p || []}));
+            res.send( view.index() );
+        }
     });
 };
 

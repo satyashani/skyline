@@ -67,7 +67,7 @@ class Model {
     
     getCondSingle (field,match,pos){
         if(this.props.hasOwnProperty(field)){
-            return this.props[field] + " " + literals[match] + " $" + pos;
+            return field + " " + literals[match] + " $" + pos;
         }else throw new Error(errors.invalid_field_name+" - "+field);
     }
     
