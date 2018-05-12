@@ -10,6 +10,7 @@ var config = require("../../config").pg;
 var types = model.types;
 var table = config.pgschema+".inverters";
 var props = {
+    id      : types.string,
     name    :   types.string,
     brand   :   types.string,
     power   :   types.integer,

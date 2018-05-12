@@ -9,6 +9,7 @@
  */
 
 CREATE TABLE inverters (
+    id              varchar(100) primary key,
     name            varchar(100),
     brand           varchar(30),
     power           integer,
@@ -36,6 +37,7 @@ CREATE TABLE inverters (
 );
 
 CREATE TABLE batteries (
+    id            varchar(100) primary key,
     name          varchar(100),
     brand         varchar(100),
     warranty      integer,
@@ -48,6 +50,7 @@ CREATE TABLE batteries (
 );
 
 CREATE TABLE panels (
+    id              varchar(100) primary key,
     name            varchar(100),
     brand           varchar(20),
     power           integer,
@@ -64,13 +67,13 @@ CREATE TABLE panels (
 );
 
 CREATE VIEW products AS
-    SELECT 'panel'  as type ,name, brand , price, maxdiscount, tax, 
+    SELECT 'panel'  as type, id ,name, brand , price, maxdiscount, tax, 
         '{ "power" : ' || power || ' , "voc" : ' || voc || ', "isc" : ' || isc || ' } '  as props FROM panels
     UNION
-    SELECT 'battery'  as type , name, brand , price, maxdiscount, tax, 
+    SELECT 'battery'  as type, id , name, brand , price, maxdiscount, tax, 
         '{ "ah" : ' || ah || ' , "v" : ' || v || ' } '  as props FROM batteries
     UNION
-    SELECT 'inverter'  as type, name, brand , price, maxdiscount, tax, 
+    SELECT 'inverter'  as type, id, name, brand , price, maxdiscount, tax, 
         '{ "power" : ' || power || ' , "phase" : ' || phase || ', "systemtype" : ' || systemtype ||
                 ', "pvkwmax" : ' || pvkwmax || ' , "pvv" : [' || pvvlow || ',' || pvvhigh || '], "chargertype" : ' || chargertype ||
                 ', "loadkwmax" : ' || loadkwmax || ' , "surgekwmax" : ' || surgekwmax || ', "solarefficiency" : ' || solarefficiency || 

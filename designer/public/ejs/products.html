@@ -1,7 +1,49 @@
 <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
-    <div class="col-lg-2 col-lg-offset-1 homebox">
+    <div class="col-lg-2 col-lg-offset-1 homebox filter">
         <b>Filters</b>
         <hr />
+        
+        <form style="padding-top: 10px;" id="filter">
+            <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;">
+                <small>PRICE</small>
+                <div class='btn btn-primary btn-xs' style="right: 0px;position: absolute;">
+                    <span class='glyphicon glyphicon-remove' id='removePriceFilter'></span>    
+                </div>
+            </div>
+            
+            <div class="col-lg-12 pricerange" style="padding-left: 0px;">
+                <input type="text" value="<%- pricelow %>" id="pricelow" size="6"/>
+                <span style="margin-left: 10px;">TO</span>
+                <input type="text" value="<%- pricehigh %>" id="pricehigh" size="6" style="margin-left: 10px;"/>
+            </div>
+            
+            <div class="col-lg-12" style="padding: 0px;">
+                <hr />
+            </div>
+            
+            <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;">
+                <small>BRANDS</small>
+                <div class='btn btn-primary btn-xs' style="right: 0px;position: absolute;">
+                    <span class='glyphicon glyphicon-remove' id='removeBrandsFilter'></span>
+                </div>
+            </div>
+            
+            <% brands.forEach(function(b){ %>
+            <div id="brands" class="col-lg-12" style="padding-left: 0px;">
+                <label for="<%- b %>" class="container">
+                    <%- b %>
+                    <input type="checkbox" id="<%- b %>" <%= brandSelected.indexOf(b) > -1 ? 'checked' : '' %> />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <% }) %>
+            
+            <div class="col-lg-12" style="padding: 0px;">
+                <hr />
+            </div>
+            
+            <a id="apply" class="btn btl-lg btn-primary col-lg-12" href="<%- url %>">Apply</a>
+        </form>
     </div>
     
     <div class="col-lg-8 homebox" style="margin-left: 20px; margin-bottom: 20px;">
@@ -10,21 +52,21 @@
         
         <% products.forEach(function(p){ %>
         <div class="product">
-            <a class="focus" target="_blank" href="/sex-i">
+            <a class="focus" target="_blank" href="/product/<%- p.id %>">
                 <div>
                     <div>
                         <div class="imagecontainer" style="height: 280px; width: 200px;">
-                            <img class="_1Nyybr  _30XEf0" alt="<%- p.name %>" src="/img/product/<%- p.name %>.jpg">
+                            <img alt="<%- p.name %>" src="/img/product/<%- p.id %>.jpg">
                         </div> 
                     </div> 
                 </div>
             </a>
-            <a class="title" title="<%- p.name %>" target="_blank" href="/e">
+            <a class="title" title="<%- p.name %>" target="_blank" href="/product/<%- p.id %>">
                 <%- p.name %>
             </a>
             <div class="subtitle"><%- p.brand %></div>
-            <a class="price" target="_blank" href="/6de">
-                <div class="_1uv9Cb">
+            <a class="price" target="_blank" href="/product/<%- p.id %>">
+                <div>
                     <div class="actual">₹<%- p.price %></div>
                     <div class="tagged">₹<%- p.price %></div>
                     <div class="off">0% off</div> 

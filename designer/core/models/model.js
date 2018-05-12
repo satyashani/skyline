@@ -14,7 +14,8 @@ var literals = {
     lt : '<',
     gte : '>=',
     lte : '<=',
-    ne : "!="
+    ne : "!=",
+    similar : "SIMILAR TO"
 };
 
 var types = {
@@ -71,12 +72,13 @@ class Model {
         }else throw new Error(errors.invalid_field_name+" - "+field);
     }
     
-    getLiteral (cond){
+    getLiterals (cond){
+        var list = [];
         for(var k in literals){
             if(cond.hasOwnProperty(k))
-                return k;
+                list.push(k);
         }
-        return null;
+        return list;
     }
     
     /**
@@ -96,13 +98,14 @@ class Model {
         let list = [], params = [], pos = posstart || 1;
         for(var k in cond){
             if(k !== 'join' && k !== 'sub' && k !== 'limit' && k !== 'offset' && k !== 'order' ){
-                var l = this.getLiteral(cond[k]);
-                if(l){
-                    list.push(this.getCondSingle(k,l,pos++));
-                    params.push(cond[k][l]);
-                }else{
-                    throw new Error(errors.invalid_sql_matcher);
+                var ltlist = this.getLiterals(cond[k]);
+                var condlist = [];
+                for(var i=0;i<ltlist.length;i++){
+                    condlist.push(this.getCondSingle(k,ltlist[i],pos++));
+                    params.push(cond[k][ltlist[i]]);
                 }
+                var join = cond[k].join || "AND";
+                list.push(condlist.join(" "+join+" "));
             }else if(k === 'sub'){
                 var sub = this.getCond(cond[k],pos);
                 list = [...list,sub.sql ? " ( " +sub.sql + " ) " : ""];
@@ -184,6 +187,18 @@ class Model {
             var t = typeof view === 'string' ? view : this.table;
             var cnd = this.getCond(cond);
             var sql = "SELECT * FROM "+t+ cnd.sql + this.getTailSql(cond);
+        }catch(e){
+            return cb(e);
+        }
+        pg.selectAll(sql,cnd.params,cb);
+    }
+    
+    findFields ( fields ,cond, view,callback){
+        var cb = typeof view === 'string' ? callback : view;
+        try{
+            var t = typeof view === 'string' ? view : this.table;
+            var cnd = this.getCond(cond);
+            var sql = "SELECT "+fields.join(",")+" FROM "+t+ cnd.sql + this.getTailSql(cond);
         }catch(e){
             return cb(e);
         }

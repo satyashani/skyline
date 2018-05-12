@@ -21,7 +21,8 @@ var templates = {
     products : "products", 
     sidebar : "sidebar", 
     titlebar : "titlebar",
-    index : "index"
+    index : "index",
+    notfound : "notfound"
 };
 exports.templates = templates;
 
@@ -55,7 +56,8 @@ var defaultJs = [
     "/js/api.js",
     "/js/app.js",
     "/js/controllers.js",
-    "/js/services.js"
+    "/js/services.js",
+    "/js/page.js"
 ];
 
 var defaultCss = [

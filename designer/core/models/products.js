@@ -12,6 +12,7 @@ var types = model.types;
 var table = config.pgschema+".products";
 
 var props = {
+    id      : types.string,
     type    :   types.string,
     name    :   types.string,
     brand   :   types.string,
@@ -33,6 +34,16 @@ class Product extends model.Model{
     
     update (){
         // nothing to do
+    }
+    
+    getBrands (cond,callback){
+        this.findFields(["distinct brand"],cond, function(err,list){
+            console.log(err);
+            if(!list) callback(err,[]);
+            else{
+                callback(err,list.map(function(l){ return l.brand;} ));
+            }
+        });
     }
 }
 

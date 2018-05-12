@@ -11,6 +11,7 @@ var config = require("../../config").pg;
 var types = model.types;
 var table = config.pgschema+".batteries";
 var props = {
+    id            : types.string,
     name          : types.string,
     brand         : types.string,
     warranty      : types.integer,
