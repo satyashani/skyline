@@ -1,0 +1,214 @@
+<div ng-controller="designer">
+    <div class="col-lg-2 col-lg-offset-1 homebox filter">
+        <b>Filters</b>
+        
+        <div class="col-lg-12" style="padding: 0px;">
+            <hr />
+        </div>
+        
+        <form id="designer">
+            <div class="col-lg-12" style="padding: 0px; margin : 10px 0px;">
+                <small>System Type</small>
+            </div>
+            
+            <div class="col-lg-12" style="padding-left: 0px;">
+                <select style="width: 150px;" id="type" ng-model="inputs.type"   ng-options="key as value for (key,value) in types"></select>
+            </div>
+            
+            <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;">
+                <small>Daily Units Required  (kWh)</small>
+            </div>
+
+            <div class="col-lg-12" style="padding-left: 0px;">
+                <input size="7" type="text" id="dailyunits" ng-model="inputs.dailyunits"  placeholder="Units / kWh"/>
+            </div>            
+            
+            <div class="col-lg-12" style="padding: 0px;">
+                <hr />
+            </div>
+            
+            <div  ng-if="inputs.type!=='ongrid'">
+                <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;" >
+                    <small>Backup Duration (Hours)</small>
+                </div>
+
+                <div class="col-lg-12" style="padding-left: 0px;">
+                    <input  size="7" type="text" id="backuphrs" ng-model="inputs.backuphrs"  placeholder="Hours"/>
+                </div>
+
+                <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;">
+                    <small>Load During Power-Cut (Watts)</small>
+                </div>
+
+                <div class="col-lg-12" style="padding-left: 0px;">
+                    <input  size="7" type="text" id="backupkw" ng-model="inputs.backupkw"  placeholder="Watt"/>
+                </div>            
+            </div>
+            
+            <div class="col-lg-12" style="padding: 0px; margin-bottom: 10px;">
+                <small>Maximum Load (Watts)</small>
+            </div>
+
+            <div class="col-lg-12" style="padding-left: 0px;">
+                <input  size="7" type="text" id="loadmax" ng-model="inputs.loadmax"  placeholder="Watt"/>
+            </div>
+            
+            <div id="brands" class="col-lg-12" style="padding-left: 0px;">
+                <label for="filter" class="container">
+                    Use Filter
+                    <input type="checkbox" id="filter" ng-model="inputs.filter" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            
+            <div class="col-lg-12" style="padding: 0px;">
+                <hr />
+            </div>
+            
+            <a id="apply" class="btn btl-lg btn-primary col-lg-12" type="submit" ng-click="design()" >Design</a>
+        </form>
+    </div>
+    
+    <div class="col-lg-8 homebox" style="margin-left: 20px; margin-bottom: 20px;" ng-show="results.length">
+        <b>Showing results 1-10 of 12</b>
+        <div class="col-lg-2 pull-right">
+            <select name="sortkey" ng-model="sortkey" 
+                    ng-options="key as value for (key,value) in sortkeys" 
+                    ng-change="sort()" 
+                    style="background: white;padding: 2px 5px 5px 5px;margin-top: -5px;">
+            </select>
+        </div>
+        <div class="col-lg-2 pull-right" style="text-align: right;">
+           <b>Sort :</b>
+        </div>
+        <hr />
+        <div class="row"  ng-repeat="r in results">
+            <div class="col-lg-12">
+                <h4 ng-if="inputs.type === 'ongrid'">
+                    {{r.panel.totalkw / 1000 }}kW On-Grid Solar System
+                </h4>
+                <h4 ng-if="inputs.type === 'offgrid'">
+                    {{r.panel.totalkw / 1000 }}kW Off-Grid Solar With {{ r.battery.totalah }}AH Battery
+                </h4>
+            </div>
+            <div class="col-lg-5">
+                <div class="panel panel-success">
+                    <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                        <span class="panel-title" style=" font-size: 12px;">Inverter</span> 
+                    </div> 
+                    <div class="panel-body"> 
+                        <div class="col-lg-7">
+                            <b>{{ r.inverter }}</b>
+                            <table style="margin-top: 10px;">
+                                <tbody>
+                                    <tr>
+                                        <td>Max Load :</td><td>{{ r.maxload / 1000 }}kW</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Max Solar Panel :</td><td>{{ r.maxpv / 1000 }}kW</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-5">
+                            <a href="#" class="thumbnail">
+                                <img src="/img/product/{{r.inverter}}.jpg" alt="No Image" height="100" style="min-height: 125px;" />
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-lg-12">
+                    Value : {{ r.value }} | Value For Money : {{ r.ranks.valueformoney }}
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                        <span class="panel-title" style=" font-size: 12px;">Solar Panels</span> 
+                    </div> 
+                    <div class="panel-body"> 
+                        <div>{{ r.panel.series * r.panel.parallel }} x {{ r.panel.name }} | <b>{{ r.panel.totalkw }}W</b></div>
+                        <small>
+                            Array - {{ r.panel.series }} x {{ r.panel.parallel }}
+                        </small>
+                    </div>
+                </div> 
+
+                <div class="panel panel-success" ng-if="inputs.type !== 'ongrid'">
+                    <div class="panel-heading"  style="padding: 0px 5px; font-weight: bold;"> 
+                        <span class="panel-title" style=" font-size: 12px;">Battery</span> 
+                    </div> 
+                    <div class="panel-body"> 
+                        <div>{{ r.battery.series * r.battery.parallel }} x {{ r.battery.name }} | <b>{{ r.battery.totalah }}AH</b></div>
+                        <small>
+                            Array - {{ r.battery.series }} x {{ r.battery.parallel }}
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+                <div class="col-lg-12">
+                    <span class="label label-primary">
+                        Value :
+                    </span>
+                    <div class="progress value">
+                        <div ng-if="r.rankpc.pvkw <= 100" class="progress-bar progress-bar-success" style="width: {{r.rankpc.pvkw}}%;">
+                          Panel Capacity
+                        </div>
+                        <div ng-if="r.rankpc.pvkw > 100" class="progress-bar progress-bar-success" style="width: {{10000/r.rankpc.pvkw}}%;">
+                          Panel Capacity
+                        </div>
+                        <div ng-if="r.rankpc.pvkw > 100" class="progress-bar progress-bar-info" style="width: {{(1 - 100/r.rankpc.pvkw)*100 }}%;">
+
+                        </div>
+                    </div>
+                    <div class="progress value" ng-if="inputs.type !== 'ongrid'">
+                        <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.ah}}%;">
+                          Battery Capacity
+                        </div>
+                    </div>
+                    <div class="progress value">
+                        <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.maxload}}%;">
+                          Peak Load
+                        </div>
+                    </div>
+                    <div class="progress value">
+                        <div class="progress-bar progress-bar-success" style="width: {{r.rankpc.output}}%;">
+                          Output
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12"  style="margin-top: 15px;">
+                    <span class="label label-primary" >
+                        Cost Share :
+                    </span>
+
+                    <div class="progress value">
+                        <div class="progress-bar progress-bar-success" style="width: {{r.costpc.panel}}%;">
+                           Panel
+                        </div>
+                        <div class="progress-bar progress-bar-warning" style="width: {{r.costpc.battery}}%;" ng-if="inputs.type !== 'ongrid'">
+                           Battery
+                        </div>
+                        <div class="progress-bar progress-bar-danger" style="width: {{r.costpc.inverter}}%;">
+                           Inverter
+                        </div>
+                        <div class="progress-bar progress-bar-warning-striped" style="width: {{r.costpc.structure}}%;">
+                           Structure
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12" style="margin-top: 15px;">
+                    <div class="btn btn-primary col-lg-12">
+                        <b> Rs. {{ r.cost }}/-</b>
+                        <small>(Tax Included : Rs. {{ r.tax }}/-)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,7 @@ var files = {};
 
 var templates = {
     achievements : "achievements",
+    app : "app",
     contents : "contents",
     footer : "footer", 
     gallery : "gallery", 

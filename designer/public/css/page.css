@@ -251,3 +251,15 @@ and open the template in the editor.
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+#designer input,select{
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    margin-bottom: 10px;
+}
+
+#designer small{
+    text-transform: uppercase;
+}

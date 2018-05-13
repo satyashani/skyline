@@ -1,80 +1,6052 @@
 [
     {
-        "inverter": "SWG 10000 TL1",
-        "maxload": 10000,
-        "maxpv": 10000,
-        "brand": "SWELECT",
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
         "panel": {
             "name": "HHV-320-72",
-            "series": 26,
+            "series": 8,
             "parallel": 1,
             "power": 320,
-            "totalkw": 8320,
-            "diff": 1680,
+            "totalkw": 2560,
+            "diff": 160,
             "brand": "SWELECT",
-            "diffcat": 2
+            "diffcat": 1
         },
-        "cost": 434260,
-        "tax": 20060,
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 200,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 191620,
+        "tax": 15670,
         "ranks": {
-            "cost": 1,
+            "cost": 10,
+            "battery": 0,
             "panel": 0,
             "kw": 0,
             "pvmatch": 0,
+            "ahmatch": 0,
             "load": 0,
             "maxpv": 0,
-            "valueformoney": 1260917.5377468062
+            "ah": 0,
+            "valueformoney": 180206.89655172414
         },
         "costpc": {
-            "panel": 71,
-            "inverter": 27,
+            "panel": 50,
+            "battery": 21,
+            "inverter": 29,
             "structure": 3
         },
         "rankpc": {
-            "pvkw": 84,
+            "ah": 107,
+            "pvkw": 107,
             "maxload": 100,
-            "output": 82
+            "output": 105
         },
-        "value": 0.3444,
-        "rank": 1260917.5377468062
+        "value": 1.0633333333333332,
+        "rank": 180206.89655172414
     },
     {
-        "inverter": "SWG 10000 TL1",
-        "maxload": 10000,
-        "maxpv": 10000,
-        "brand": "SWELECT",
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
         "panel": {
-            "name": "HB-250",
-            "series": 25,
-            "parallel": 2,
-            "power": 250,
-            "totalkw": 12500,
-            "diff": 2500,
-            "brand": "HBL",
-            "diffcat": 3
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
         },
-        "cost": 731125,
-        "tax": 33625,
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 183748,
+        "tax": 13948,
         "ranks": {
-            "cost": 5,
+            "cost": 3,
+            "battery": 0,
             "panel": 0,
             "kw": 0,
             "pvmatch": 0,
+            "ahmatch": 0,
             "load": 0,
             "maxpv": 0,
-            "valueformoney": 1426585.3658536586
+            "ah": 0,
+            "valueformoney": 188782.19178082192
         },
         "costpc": {
-            "panel": 81,
-            "inverter": 16,
+            "panel": 52,
+            "battery": 18,
+            "inverter": 30,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 188782.19178082192
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 200,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 198290,
+        "tax": 15940,
+        "ranks": {
+            "cost": 17,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 188847.61904761905
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 20,
+            "inverter": 28,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 188847.61904761905
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 193237,
+        "tax": 18737,
+        "ranks": {
+            "cost": 12,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 193237
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 30,
+            "inverter": 20,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 86
+        },
+        "value": 1,
+        "rank": 193237
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 189380,
+        "tax": 15180,
+        "ranks": {
+            "cost": 6,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 194568.49315068492
+        },
+        "costpc": {
+            "panel": 50,
+            "battery": 20,
+            "inverter": 29,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 194568.49315068492
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 209092,
+        "tax": 19492,
+        "ranks": {
+            "cost": 28,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 196638.2445141066
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 28,
+            "inverter": 26,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 196638.2445141066
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "ah": 75,
+            "totalah": 450,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 218308,
+        "tax": 21508,
+        "ranks": {
+            "cost": 42,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 197266.26506024096
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 31,
+            "inverter": 25,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 120,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.1066666666666667,
+        "rank": 197266.26506024096
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 192580,
+        "tax": 15880,
+        "ranks": {
+            "cost": 11,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 197856.16438356164
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 21,
+            "inverter": 29,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 197856.16438356164
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 180437,
+        "tax": 15937,
+        "ranks": {
+            "cost": 2,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 198282.41758241758
+        },
+        "costpc": {
+            "panel": 53,
+            "battery": 25,
+            "inverter": 22,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 86
+        },
+        "value": 0.91,
+        "rank": 198282.41758241758
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 190418,
+        "tax": 14218,
+        "ranks": {
+            "cost": 9,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 198352.08333333334
+        },
+        "costpc": {
+            "panel": 53,
+            "battery": 17,
+            "inverter": 29,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 198352.08333333334
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 2,
+            "parallel": 4,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 189653,
+        "tax": 17953,
+        "ranks": {
+            "cost": 8,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 203927.9569892473
+        },
+        "costpc": {
+            "panel": 50,
+            "battery": 29,
+            "inverter": 21,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 86
+        },
+        "value": 0.93,
+        "rank": 203927.9569892473
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 196050,
+        "tax": 15450,
+        "ranks": {
+            "cost": 13,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 204218.75
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 19,
+            "inverter": 28,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 204218.75
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 215762,
+        "tax": 19762,
+        "ranks": {
+            "cost": 35,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 205487.61904761905
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 27,
+            "inverter": 26,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 205487.61904761905
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "ah": 75,
+            "totalah": 450,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 224978,
+        "tax": 21778,
+        "ranks": {
+            "cost": 53,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 205772.56097560975
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 30,
+            "inverter": 25,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 120,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.0933333333333333,
+        "rank": 205772.56097560975
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "ah": 40,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 218820,
+        "tax": 21620,
+        "ranks": {
+            "cost": 43,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 205786.8338557994
+        },
+        "costpc": {
+            "panel": 43,
+            "battery": 31,
+            "inverter": 25,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 205786.8338557994
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 189432,
+        "tax": 18532,
+        "ranks": {
+            "cost": 7,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 205904.34782608695
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 31,
+            "inverter": 21,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.92,
+        "rank": 205904.34782608695
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 200,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 216665,
+        "tax": 16815,
+        "ranks": {
+            "cost": 36,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 206347.61904761905
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 19,
+            "inverter": 26,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 206347.61904761905
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 199250,
+        "tax": 16150,
+        "ranks": {
+            "cost": 18,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 207552.08333333334
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 21,
+            "inverter": 28,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 207552.08333333334
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 200,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 222527.5,
+        "tax": 16927.5,
+        "ranks": {
+            "cost": 48,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 209273.51097178686
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 18,
+            "inverter": 25,
             "structure": 4
         },
         "rankpc": {
-            "pvkw": 125,
+            "ah": 107,
+            "pvkw": 107,
             "maxload": 100,
-            "output": 123
+            "output": 105
         },
-        "value": 0.5125,
-        "rank": 1426585.3658536586
+        "value": 1.0633333333333332,
+        "rank": 209273.51097178686
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 200AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 200,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 222527.5,
+        "tax": 16927.5,
+        "ranks": {
+            "cost": 48,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 209273.51097178686
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 18,
+            "inverter": 25,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 209273.51097178686
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 176632,
+        "tax": 15732,
+        "ranks": {
+            "cost": 1,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 212809.6385542169
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 25,
+            "inverter": 22,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.83,
+        "rank": 212809.6385542169
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 227887,
+        "tax": 20387,
+        "ranks": {
+            "cost": 58,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 214313.7931034483
+        },
+        "costpc": {
+            "panel": 42,
+            "battery": 25,
+            "inverter": 33,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 214313.7931034483
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "ah": 40,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 225490,
+        "tax": 21890,
+        "ranks": {
+            "cost": 56,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 214752.38095238095
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 30,
+            "inverter": 25,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 214752.38095238095
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 208793,
+        "tax": 15093,
+        "ranks": {
+            "cost": 24,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 217492.70833333334
+        },
+        "costpc": {
+            "panel": 57,
+            "battery": 16,
+            "inverter": 26,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 217492.70833333334
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 185848,
+        "tax": 17748,
+        "ranks": {
+            "cost": 4,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 218644.70588235295
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 29,
+            "inverter": 21,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.85,
+        "rank": 218644.70588235295
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 214655.5,
+        "tax": 15205.5,
+        "ranks": {
+            "cost": 31,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 220536.47260273973
+        },
+        "costpc": {
+            "panel": 57,
+            "battery": 15,
+            "inverter": 26,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 220536.47260273973
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 3y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 214655.5,
+        "tax": 15205.5,
+        "ranks": {
+            "cost": 31,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 220536.47260273973
+        },
+        "costpc": {
+            "panel": 57,
+            "battery": 15,
+            "inverter": 26,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 220536.47260273973
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 215087,
+        "tax": 17587,
+        "ranks": {
+            "cost": 34,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 220979.79452054793
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 21,
+            "inverter": 34,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 220979.79452054793
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 218282,
+        "tax": 19882,
+        "ranks": {
+            "cost": 41,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 221231.75675675675
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 27,
+            "inverter": 18,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 84
+        },
+        "value": 0.9866666666666667,
+        "rank": 221231.75675675675
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "ah": 75,
+            "totalah": 450,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 243353,
+        "tax": 22653,
+        "ranks": {
+            "cost": 72,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 222578.96341463417
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 28,
+            "inverter": 23,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 120,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.0933333333333333,
+        "rank": 222578.96341463417
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 234137,
+        "tax": 20637,
+        "ranks": {
+            "cost": 61,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 222987.61904761902
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 25,
+            "inverter": 24,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 222987.61904761902
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 214425,
+        "tax": 16325,
+        "ranks": {
+            "cost": 30,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 223359.375
+        },
+        "costpc": {
+            "panel": 56,
+            "battery": 18,
+            "inverter": 26,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 223359.375
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 234557,
+        "tax": 20657,
+        "ranks": {
+            "cost": 63,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 223387.61904761902
+        },
+        "costpc": {
+            "panel": 43,
+            "battery": 25,
+            "inverter": 32,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 223387.61904761902
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "ah": 75,
+            "totalah": 450,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 249215.5,
+        "tax": 22765.5,
+        "ranks": {
+            "cost": 77,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 225194.72891566265
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 27,
+            "inverter": 22,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 120,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.1066666666666667,
+        "rank": 225194.72891566265
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 2,
+            "parallel": 3,
+            "ah": 75,
+            "totalah": 450,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 249215.5,
+        "tax": 22765.5,
+        "ranks": {
+            "cost": 77,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 225194.72891566265
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 27,
+            "inverter": 22,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 120,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.1066666666666667,
+        "rank": 225194.72891566265
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 239999.5,
+        "tax": 20749.5,
+        "ranks": {
+            "cost": 68,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 225704.8589341693
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 24,
+            "inverter": 23,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 225704.8589341693
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 2,
+            "parallel": 2,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 239999.5,
+        "tax": 20749.5,
+        "ranks": {
+            "cost": 68,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 225704.8589341693
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 24,
+            "inverter": 23,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 225704.8589341693
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 8,
+            "parallel": 1,
+            "power": 320,
+            "totalkw": 2560,
+            "diff": 160,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 224303,
+        "tax": 19603,
+        "ranks": {
+            "cost": 52,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 225808.38926174497
+        },
+        "costpc": {
+            "panel": 42,
+            "battery": 24,
+            "inverter": 33,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9933333333333333,
+        "rank": 225808.38926174497
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 220287.5,
+        "tax": 16437.5,
+        "ranks": {
+            "cost": 44,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 226322.77397260274
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 17,
+            "inverter": 25,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 226322.77397260274
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "UTL 150AH Solar 5y",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "cost": 220287.5,
+        "tax": 16437.5,
+        "ranks": {
+            "cost": 44,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 226322.77397260274
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 17,
+            "inverter": 25,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 226322.77397260274
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 200952,
+        "tax": 19152,
+        "ranks": {
+            "cost": 19,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 226637.59398496238
+        },
+        "costpc": {
+            "panel": 36,
+            "battery": 29,
+            "inverter": 36,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8866666666666667,
+        "rank": 226637.59398496238
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 217625,
+        "tax": 17025,
+        "ranks": {
+            "cost": 39,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 226692.70833333334
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 19,
+            "inverter": 25,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 226692.70833333334
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 221667,
+        "tax": 20067,
+        "ranks": {
+            "cost": 46,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 226962.7986348123
+        },
+        "costpc": {
+            "panel": 41,
+            "battery": 26,
+            "inverter": 32,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 226962.7986348123
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 208969.5,
+        "tax": 19319.5,
+        "ranks": {
+            "cost": 26,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 227140.76086956522
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 28,
+            "inverter": 19,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.92,
+        "rank": 227140.76086956522
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 208969.5,
+        "tax": 19319.5,
+        "ranks": {
+            "cost": 26,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 227140.76086956522
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 28,
+            "inverter": 19,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.92,
+        "rank": 227140.76086956522
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 205482,
+        "tax": 17082,
+        "ranks": {
+            "cost": 23,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 229162.08178438662
+        },
+        "costpc": {
+            "panel": 58,
+            "battery": 22,
+            "inverter": 19,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 84
+        },
+        "value": 0.8966666666666666,
+        "rank": 229162.08178438662
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 223487.5,
+        "tax": 17137.5,
+        "ranks": {
+            "cost": 50,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 229610.44520547945
+        },
+        "costpc": {
+            "panel": 54,
+            "battery": 19,
+            "inverter": 25,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 229610.44520547945
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 150AH Solar",
+            "series": 2,
+            "parallel": 1,
+            "ah": 150,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 223487.5,
+        "tax": 17137.5,
+        "ranks": {
+            "cost": 50,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 229610.44520547945
+        },
+        "costpc": {
+            "panel": 54,
+            "battery": 19,
+            "inverter": 25,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 229610.44520547945
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 221757,
+        "tax": 17857,
+        "ranks": {
+            "cost": 47,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 230996.875
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 20,
+            "inverter": 33,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 230996.875
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "ah": 40,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 243865,
+        "tax": 22765,
+        "ranks": {
+            "cost": 73,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 232252.38095238095
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 28,
+            "inverter": 23,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 100,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 232252.38095238095
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 2,
+            "parallel": 5,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 214698,
+        "tax": 19098,
+        "ranks": {
+            "cost": 33,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 234216
+        },
+        "costpc": {
+            "panel": 56,
+            "battery": 25,
+            "inverter": 18,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 84
+        },
+        "value": 0.9166666666666666,
+        "rank": 234216
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "ah": 40,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 249727.5,
+        "tax": 22877.5,
+        "ranks": {
+            "cost": 80,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 234853.4482758621
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 27,
+            "inverter": 22,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 234853.4482758621
+    },
+    {
+        "inverter": "FlinFuzion MPPT 3kVA-24V",
+        "maxload": 3000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 2,
+            "parallel": 5,
+            "ah": 40,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 249727.5,
+        "tax": 22877.5,
+        "ranks": {
+            "cost": 80,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 234853.4482758621
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 27,
+            "inverter": 22,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 100,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 234853.4482758621
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 208867,
+        "tax": 17267,
+        "ranks": {
+            "cost": 25,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 235564.2857142857
+        },
+        "costpc": {
+            "panel": 43,
+            "battery": 22,
+            "inverter": 34,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 235564.2857142857
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 230973,
+        "tax": 19873,
+        "ranks": {
+            "cost": 60,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 235686.73469387754
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 24,
+            "inverter": 32,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 0.98,
+        "rank": 235686.73469387754
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 188152,
+        "tax": 16352,
+        "ranks": {
+            "cost": 5,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 236174.05857740587
+        },
+        "costpc": {
+            "panel": 38,
+            "battery": 24,
+            "inverter": 38,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.7966666666666666,
+        "rank": 236174.05857740587
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 196169.5,
+        "tax": 16519.5,
+        "ranks": {
+            "cost": 14,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 236348.7951807229
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 23,
+            "inverter": 20,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.83,
+        "rank": 236348.7951807229
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 196169.5,
+        "tax": 16519.5,
+        "ranks": {
+            "cost": 14,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 236348.7951807229
+        },
+        "costpc": {
+            "panel": 55,
+            "battery": 23,
+            "inverter": 20,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.83,
+        "rank": 236348.7951807229
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 263967,
+        "tax": 21867,
+        "ranks": {
+            "cost": 96,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 239245.0151057402
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 22,
+            "inverter": 27,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 239245.0151057402
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 263967,
+        "tax": 21867,
+        "ranks": {
+            "cost": 96,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 239245.0151057402
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 22,
+            "inverter": 27,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 239245.0151057402
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 218083,
+        "tax": 19283,
+        "ranks": {
+            "cost": 40,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 240532.7205882353
+        },
+        "costpc": {
+            "panel": 42,
+            "battery": 25,
+            "inverter": 33,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 240532.7205882353
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 252932,
+        "tax": 21532,
+        "ranks": {
+            "cost": 86,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 240887.61904761902
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 23,
+            "inverter": 29,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 1.05,
+        "rank": 240887.61904761902
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 205385.5,
+        "tax": 18535.5,
+        "ranks": {
+            "cost": 21,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 241630
+        },
+        "costpc": {
+            "panel": 52,
+            "battery": 26,
+            "inverter": 19,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.85,
+        "rank": 241630
+    },
+    {
+        "inverter": "FLINSLIM LITE-PWM-5K-48V",
+        "maxload": 5000,
+        "maxpv": 3000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 5,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 205385.5,
+        "tax": 18535.5,
+        "ranks": {
+            "cost": 21,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 241630
+        },
+        "costpc": {
+            "panel": 52,
+            "battery": 26,
+            "inverter": 19,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 75
+        },
+        "value": 0.85,
+        "rank": 241630
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 197368,
+        "tax": 18368,
+        "ranks": {
+            "cost": 16,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 241675.10204081633
+        },
+        "costpc": {
+            "panel": 36,
+            "battery": 27,
+            "inverter": 36,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8166666666666667,
+        "rank": 241675.10204081633
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 258794.5,
+        "tax": 21644.5,
+        "ranks": {
+            "cost": 91,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 243380.407523511
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 22,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 243380.407523511
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 258794.5,
+        "tax": 21644.5,
+        "ranks": {
+            "cost": 91,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 243380.407523511
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 22,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 1.0633333333333332,
+        "rank": 243380.407523511
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 237942,
+        "tax": 20842,
+        "ranks": {
+            "cost": 66,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 243626.62116040956
+        },
+        "costpc": {
+            "panel": 38,
+            "battery": 24,
+            "inverter": 37,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 243626.62116040956
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 238204.5,
+        "tax": 20854.5,
+        "ranks": {
+            "cost": 67,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 243895.39249146756
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 24,
+            "inverter": 30,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 243895.39249146756
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 217227,
+        "tax": 19927,
+        "ranks": {
+            "cost": 38,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 244992.85714285713
+        },
+        "costpc": {
+            "panel": 33,
+            "battery": 27,
+            "inverter": 40,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8866666666666667,
+        "rank": 244992.85714285713
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 251167,
+        "tax": 19067,
+        "ranks": {
+            "cost": 84,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 247862.17105263154
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 18,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 247862.17105263154
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 251167,
+        "tax": 19067,
+        "ranks": {
+            "cost": 84,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 247862.17105263154
+        },
+        "costpc": {
+            "panel": 51,
+            "battery": 18,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 247862.17105263154
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 240132,
+        "tax": 18732,
+        "ranks": {
+            "cost": 70,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 250137.5
+        },
+        "costpc": {
+            "panel": 50,
+            "battery": 19,
+            "inverter": 31,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 0.96,
+        "rank": 250137.5
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 260383,
+        "tax": 21083,
+        "ranks": {
+            "cost": 93,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 251983.54838709676
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 21,
+            "inverter": 28,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 251983.54838709676
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 260383,
+        "tax": 21083,
+        "ranks": {
+            "cost": 93,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 251983.54838709676
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 21,
+            "inverter": 28,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 251983.54838709676
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 245994.5,
+        "tax": 18844.5,
+        "ranks": {
+            "cost": 74,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 252734.07534246575
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 18,
+            "inverter": 30,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 252734.07534246575
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 245994.5,
+        "tax": 18844.5,
+        "ranks": {
+            "cost": 74,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 252734.07534246575
+        },
+        "costpc": {
+            "panel": 49,
+            "battery": 18,
+            "inverter": 30,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9733333333333334,
+        "rank": 252734.07534246575
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 225142,
+        "tax": 18042,
+        "ranks": {
+            "cost": 54,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 253919.54887218043
+        },
+        "costpc": {
+            "panel": 40,
+            "battery": 20,
+            "inverter": 39,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 253919.54887218043
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 280242,
+        "tax": 22642,
+        "ranks": {
+            "cost": 105,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 253995.77039274925
+        },
+        "costpc": {
+            "panel": 46,
+            "battery": 21,
+            "inverter": 31,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 253995.77039274925
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 280242,
+        "tax": 22642,
+        "ranks": {
+            "cost": 105,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 253995.77039274925
+        },
+        "costpc": {
+            "panel": 46,
+            "battery": 21,
+            "inverter": 31,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 253995.77039274925
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 225404.5,
+        "tax": 18054.5,
+        "ranks": {
+            "cost": 55,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 254215.6015037594
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 20,
+            "inverter": 32,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 254215.6015037594
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 10,
+            "parallel": 1,
+            "power": 250,
+            "totalkw": 2500,
+            "diff": 100,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 249348,
+        "tax": 20748,
+        "ranks": {
+            "cost": 79,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 254436.73469387754
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 22,
+            "inverter": 30,
+            "structure": 3
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 105,
+            "maxload": 167,
+            "output": 103
+        },
+        "value": 0.98,
+        "rank": 254436.73469387754
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 250332,
+        "tax": 21432,
+        "ranks": {
+            "cost": 82,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 256312.62798634812
+        },
+        "costpc": {
+            "panel": 36,
+            "battery": 23,
+            "inverter": 40,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 256312.62798634812
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 204427,
+        "tax": 17127,
+        "ranks": {
+            "cost": 20,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 256602.9288702929
+        },
+        "costpc": {
+            "panel": 35,
+            "battery": 22,
+            "inverter": 43,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.7966666666666666,
+        "rank": 256602.9288702929
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 255210.5,
+        "tax": 20860.5,
+        "ranks": {
+            "cost": 89,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 256923.32214765102
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 21,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9933333333333333,
+        "rank": 256923.32214765102
+    },
+    {
+        "inverter": "FlinFuzion MPPT 5kVA-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 17,
+            "parallel": 1,
+            "power": 150,
+            "totalkw": 2550,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 255210.5,
+        "tax": 20860.5,
+        "ranks": {
+            "cost": 89,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 256923.32214765102
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 21,
+            "inverter": 29,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 107,
+            "maxload": 167,
+            "output": 105
+        },
+        "value": 0.9933333333333333,
+        "rank": 256923.32214765102
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 234358,
+        "tax": 20058,
+        "ranks": {
+            "cost": 62,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 258483.08823529413
+        },
+        "costpc": {
+            "panel": 39,
+            "battery": 23,
+            "inverter": 38,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 258483.08823529413
+    },
+    {
+        "inverter": "FLINSLIM-MPPT - 5K-48V",
+        "maxload": 5000,
+        "maxpv": 4000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 234620.5,
+        "tax": 20070.5,
+        "ranks": {
+            "cost": 64,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 258772.61029411765
+        },
+        "costpc": {
+            "panel": 46,
+            "battery": 23,
+            "inverter": 31,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 258772.61029411765
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 229617,
+        "tax": 20517,
+        "ranks": {
+            "cost": 59,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 258966.54135338345
+        },
+        "costpc": {
+            "panel": 31,
+            "battery": 25,
+            "inverter": 44,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8866666666666667,
+        "rank": 258966.54135338345
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 254479.5,
+        "tax": 21629.5,
+        "ranks": {
+            "cost": 88,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 260559.21501706485
+        },
+        "costpc": {
+            "panel": 42,
+            "battery": 23,
+            "inverter": 35,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 260559.21501706485
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 213643,
+        "tax": 19143,
+        "ranks": {
+            "cost": 29,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 261603.67346938775
+        },
+        "costpc": {
+            "panel": 34,
+            "battery": 25,
+            "inverter": 41,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8166666666666667,
+        "rank": 261603.67346938775
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 267442,
+        "tax": 19842,
+        "ranks": {
+            "cost": 99,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 263923.02631578944
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 17,
+            "inverter": 33,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 263923.02631578944
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 267442,
+        "tax": 19842,
+        "ranks": {
+            "cost": 99,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 263923.02631578944
+        },
+        "costpc": {
+            "panel": 48,
+            "battery": 17,
+            "inverter": 33,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 263923.02631578944
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 292632,
+        "tax": 23232,
+        "ranks": {
+            "cost": 109,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 265225.37764350453
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 20,
+            "inverter": 34,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 265225.37764350453
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 292632,
+        "tax": 23232,
+        "ranks": {
+            "cost": 109,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 265225.37764350453
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 20,
+            "inverter": 34,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.1033333333333333,
+        "rank": 265225.37764350453
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 276658,
+        "tax": 21858,
+        "ranks": {
+            "cost": 101,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 267733.54838709673
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 20,
+            "inverter": 32,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 267733.54838709673
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 276658,
+        "tax": 21858,
+        "ranks": {
+            "cost": 101,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 267733.54838709673
+        },
+        "costpc": {
+            "panel": 47,
+            "battery": 20,
+            "inverter": 32,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 267733.54838709673
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 237532,
+        "tax": 18632,
+        "ranks": {
+            "cost": 65,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 267893.23308270675
+        },
+        "costpc": {
+            "panel": 38,
+            "battery": 19,
+            "inverter": 42,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 267893.23308270675
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 246748,
+        "tax": 20648,
+        "ranks": {
+            "cost": 76,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 272148.5294117647
+        },
+        "costpc": {
+            "panel": 37,
+            "battery": 22,
+            "inverter": 41,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 272148.5294117647
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 216817,
+        "tax": 17717,
+        "ranks": {
+            "cost": 37,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 272155.230125523
+        },
+        "costpc": {
+            "panel": 33,
+            "battery": 21,
+            "inverter": 46,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.7966666666666666,
+        "rank": 272155.230125523
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 241679.5,
+        "tax": 18829.5,
+        "ranks": {
+            "cost": 71,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 272570.8646616541
+        },
+        "costpc": {
+            "panel": 44,
+            "battery": 19,
+            "inverter": 36,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 272570.8646616541
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 100AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 100,
+            "totalah": 400,
+            "diff": 25,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 266869.5,
+        "tax": 22219.5,
+        "ranks": {
+            "cost": 98,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 273245.2218430034
+        },
+        "costpc": {
+            "panel": 40,
+            "battery": 22,
+            "inverter": 38,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 107,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9766666666666667,
+        "rank": 273245.2218430034
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 279832,
+        "tax": 20432,
+        "ranks": {
+            "cost": 103,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 276150
+        },
+        "costpc": {
+            "panel": 46,
+            "battery": 16,
+            "inverter": 36,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 276150
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 279832,
+        "tax": 20432,
+        "ranks": {
+            "cost": 103,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 276150
+        },
+        "costpc": {
+            "panel": 46,
+            "battery": 16,
+            "inverter": 36,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0133333333333334,
+        "rank": 276150
+    },
+    {
+        "inverter": "FLINSLIM-Dual-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 6000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 250895.5,
+        "tax": 20845.5,
+        "ranks": {
+            "cost": 83,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 276722.9779411765
+        },
+        "costpc": {
+            "panel": 43,
+            "battery": 22,
+            "inverter": 35,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 276722.9779411765
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HHV-320-72",
+            "series": 3,
+            "parallel": 2,
+            "power": 320,
+            "totalkw": 1920,
+            "diff": 480,
+            "brand": "SWELECT",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 226033,
+        "tax": 19733,
+        "ranks": {
+            "cost": 57,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 276775.10204081633
+        },
+        "costpc": {
+            "panel": 32,
+            "battery": 24,
+            "inverter": 44,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 80,
+            "maxload": 167,
+            "output": 79
+        },
+        "value": 0.8166666666666667,
+        "rank": 276775.10204081633
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 289048,
+        "tax": 22448,
+        "ranks": {
+            "cost": 107,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 279723.8709677419
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 19,
+            "inverter": 35,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 279723.8709677419
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "UTL-150",
+            "series": 6,
+            "parallel": 3,
+            "power": 150,
+            "totalkw": 2700,
+            "diff": 300,
+            "brand": "UTL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 289048,
+        "tax": 22448,
+        "ranks": {
+            "cost": 107,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 279723.8709677419
+        },
+        "costpc": {
+            "panel": 45,
+            "battery": 19,
+            "inverter": 35,
+            "structure": 4
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 113,
+            "maxload": 167,
+            "output": 111
+        },
+        "value": 1.0333333333333334,
+        "rank": 279723.8709677419
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 75AH Solar",
+            "series": 4,
+            "parallel": 1,
+            "ah": 75,
+            "totalah": 300,
+            "diff": 75,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 254069.5,
+        "tax": 19419.5,
+        "ranks": {
+            "cost": 87,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 286544.54887218046
+        },
+        "costpc": {
+            "panel": 42,
+            "battery": 18,
+            "inverter": 40,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 80,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.8866666666666667,
+        "rank": 286544.54887218046
+    },
+    {
+        "inverter": "FLINSLIM-Trio-MPPT-5K-48V",
+        "maxload": 5000,
+        "maxpv": 9000,
+        "iscombo": false,
+        "brand": "flin",
+        "panel": {
+            "name": "HB-250",
+            "series": 3,
+            "parallel": 3,
+            "power": 250,
+            "totalkw": 2250,
+            "diff": 150,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "battery": {
+            "name": "HBL 40AH Solar",
+            "series": 4,
+            "parallel": 2,
+            "ah": 40,
+            "totalah": 320,
+            "diff": 55,
+            "brand": "HBL",
+            "diffcat": 1
+        },
+        "cost": 263285.5,
+        "tax": 21435.5,
+        "ranks": {
+            "cost": 95,
+            "battery": 0,
+            "panel": 0,
+            "kw": 0,
+            "pvmatch": 0,
+            "ahmatch": 0,
+            "load": 0,
+            "maxpv": 0,
+            "ah": 0,
+            "valueformoney": 290388.41911764705
+        },
+        "costpc": {
+            "panel": 41,
+            "battery": 21,
+            "inverter": 38,
+            "structure": 2
+        },
+        "rankpc": {
+            "ah": 86,
+            "pvkw": 94,
+            "maxload": 167,
+            "output": 92
+        },
+        "value": 0.9066666666666666,
+        "rank": 290388.41911764705
     }
 ]

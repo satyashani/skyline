@@ -14,7 +14,7 @@ app.config([
         $stateProvider.state('home', {
             url : '/',
             controller : 'designer',
-            templateUrl : "html/designer.html"
+            templateUrl : "ejs/designer.html"
         });
     }
 ]);

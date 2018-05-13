@@ -111,11 +111,17 @@ var home = function(req,res){
     res.send( view.content(html).index() );
 };
 
+var designerPage = function(req,res){
+    var html = page.render(page.templates.app,{});
+    var view = page.getView();
+    res.send( view.content(html).index() );
+};
 
 exports.addRoutes = function(app){
     app.post("/design",design);
     app.get("/product/:productid",product);
     app.get("/products",products);
     app.get("/products/:type",products);
+    app.get("/design-solar-system",designerPage);
     app.get("/",home);
 };
