@@ -23,7 +23,8 @@ var templates = {
     sidebar : "sidebar", 
     titlebar : "titlebar",
     index : "index",
-    notfound : "notfound"
+    notfound : "notfound",
+    panel : "panel"
 };
 exports.templates = templates;
 

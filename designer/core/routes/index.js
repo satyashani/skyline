@@ -64,7 +64,8 @@ var product = function(req,res){
     var cond = {
         id : { eq : req.params.productid }
     };
-    models.products.findOne(cond,function(err,product){
+    models.products.getProduct(cond,function(err,product){
+        console.log(product);
         var tpl = product.type;
         if(req.is("json")){
             res.json({ok : !err, data : product , error : err ? err.message : null});
@@ -75,7 +76,8 @@ var product = function(req,res){
             }else{
                 // Separate template for each product type
                 view.content(page.render(page.templates[tpl],{
-                    product : product
+                    product : product ,
+                    img : "/img/product/"+product.id+".jpg"
                 }));
             }
             res.send( view.index() );

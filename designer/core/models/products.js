@@ -28,6 +28,19 @@ class Product extends model.Model{
         super(table,props);
     }
     
+    getProduct (cond,  callback){
+        this.findOne(cond, function(err,p){
+            if(p){
+                try{
+                    p.props = JSON.parse(p.props);
+                }catch(e){
+                    console.log("Error in findOne",e.message);
+                }
+            }
+            callback(err,p);
+        });
+    }
+    
     insert (){
         // nothing to do
     }

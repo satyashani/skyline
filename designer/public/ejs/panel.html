@@ -1,0 +1,23 @@
+<div class="col-lg-10 col-lg-offset-1 productDetail homebox">
+    <div class="col-lg-4 productImg">
+        <img src="<%- img %>" alt="" style="width: 100%; height: 400px;" />
+        <a href="#" class="btn btn-primary btn-danger col-lg-12">
+            Add to Cart
+        </a>
+    </div>
+    
+    <div class="col-lg-8">
+        <h3><%- product.name %></h3>
+        <h4>Specifications</h4>
+        <table>
+            <tbody>
+                <% for(var k in product.props){ %>
+                <tr>
+                    <td><%- k %> </td>
+                    <td><%- product.props[k] %> </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
