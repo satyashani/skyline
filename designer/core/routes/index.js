@@ -65,7 +65,6 @@ var product = function(req,res){
         id : { eq : req.params.productid }
     };
     models.products.getProduct(cond,function(err,product){
-        console.log(product);
         var tpl = product.type;
         if(req.is("json")){
             res.json({ok : !err, data : product , error : err ? err.message : null});
