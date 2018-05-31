@@ -1,0 +1,64 @@
+<div class="col-lg-10 col-lg-offset-1 productDetail homebox">
+    <div class="col-lg-4 productImg">
+        <img src="<%- img %>" alt="" style="width: 100%; height: 400px;" />
+        <a href="#" class="btn btn-primary btn-danger col-lg-12">
+            Add to Cart
+        </a>
+    </div>
+    
+    <div class="col-lg-8"style="padding: 0px 20px;">
+        <h3 class="producttitle"><%- product.name %></h3>
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 10px;">
+                <div class="actualprice">₹<%- product.price %></div>
+                <div class="mrp">₹<%- product.price %></div>
+                <div class="off">
+                    <span>0% off</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 10px;">
+                <div class="specs">
+                    <h4 style="padding-bottom: 20px;">Specifications</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Peak Power(W)</td><td><%- product.props.power %>W</td>
+                            </tr>
+                            <tr>
+                                <td>Phase</td><td><%- product.props.phase %></td>
+                            </tr>
+                            <tr>
+                                <td>Type</td><td><%- product.props.systemtype %></td>
+                            </tr>
+                            <tr>
+                                <td>Maximum Solar Panel Watt</td><td><%- product.props.pvkwmax %>W</td>
+                            </tr>
+                            <tr>
+                                <td>Solar Voltage Range</td><td><%- product.props.pvv[0] %>V to <%- product.props.pvv[1] %>V</td>
+                            </tr>
+                            <tr>
+                                <td>Charging Type</td><td><%- product.props.chargertype %></td>
+                            </tr>
+                            <tr>
+                                <td>Max Surge Load</td><td><%- product.props.surgekwmax %>W</td>
+                            </tr>
+                            <tr>
+                                <td>Solar Charging Efficiency</td><td><%- product.props.solarefficiency %>%</td>
+                            </tr>
+                            <tr>
+                                <td>Inveter Operation Efficiency</td><td><%- product.props.inverterefficieicy %>%</td>
+                            </tr>
+                            <tr>
+                                <td>PV Series</td><td><%- product.props.pvseries %>  Series</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -73,12 +73,12 @@ CREATE OR REPLACE VIEW products AS
          ', "vmax" : ' || vmax  || ', "imax" : ' || imax || ', "warranty" : "' || warranty || '" } '  as props FROM panels
     UNION
     SELECT 'battery'  as type, id , name, brand , price, maxdiscount, tax, 
-        '{ "ah" : ' || ah || ' , "v" : ' || v || ' } '  as props FROM batteries
+        '{ "ah" : ' || ah || ' , "v" : ' || v || ' , "warranty" : "' || warranty || ' Years" } '  as props FROM batteries
     UNION
     SELECT 'inverter'  as type, id, name, brand , price, maxdiscount, tax, 
-        '{ "power" : ' || power || ' , "phase" : ' || phase || ', "systemtype" : ' || systemtype ||
-                ', "pvkwmax" : ' || pvkwmax || ' , "pvv" : [' || pvvlow || ',' || pvvhigh || '], "chargertype" : ' || chargertype ||
-                ', "loadkwmax" : ' || loadkwmax || ' , "surgekwmax" : ' || surgekwmax || ', "solarefficiency" : ' || solarefficiency || 
+        '{ "power" : ' || power || ' , "phase" : ' || phase || ', "systemtype" : "' || systemtype ||
+                '", "pvkwmax" : ' || pvkwmax || ' , "pvv" : [' || pvvlow || ',' || pvvhigh || '], "chargertype" : "' || chargertype ||
+                '", "loadkwmax" : ' || loadkwmax || ' , "surgekwmax" : ' || surgekwmax || ', "solarefficiency" : ' || solarefficiency || 
                 ', "inverterefficieicy" : ' || inverterefficieicy || ' , "pvseries" : ' || pvseries || ' } '  as props FROM inverters;
 
         

@@ -24,7 +24,9 @@ var templates = {
     titlebar : "titlebar",
     index : "index",
     notfound : "notfound",
-    panel : "panel"
+    panel : "panel",
+    battery: "battery",
+    inverter: "inverter"
 };
 exports.templates = templates;
 
