@@ -20,6 +20,7 @@ var props = {
     isc             : types.float,
     imax            : types.float,
     cells           : types.float,
+    warranty        : types.string,
     price           : types.integer,
     tax             : types.integer,
     maxdiscount     : types.integer,

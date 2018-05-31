@@ -6,18 +6,50 @@
         </a>
     </div>
     
-    <div class="col-lg-8">
-        <h3><%- product.name %></h3>
-        <h4>Specifications</h4>
-        <table>
-            <tbody>
-                <% for(var k in product.props){ %>
-                <tr>
-                    <td><%- k %> </td>
-                    <td><%- product.props[k] %> </td>
-                </tr>
-                <% } %>
-            </tbody>
-        </table>
+    <div class="col-lg-8"style="padding: 0px 20px;">
+        <h3 class="producttitle"><%- product.name %></h3>
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 10px;">
+                <div class="actualprice">₹<%- product.price %></div>
+                <div class="mrp">₹<%- product.price %></div>
+                <div class="off">
+                    <span>0% off</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 10px;">
+                <div class="specs">
+                    <h4 style="padding-bottom: 20px;">Specifications</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Power (Watt)</td><td><%- product.props.power %>Wp</td>
+                            </tr>
+                            <tr>
+                                <td>Voc (Volt)</td><td><%- product.props.voc %>V</td>
+                            </tr>
+                            <tr>
+                                <td>Vmax (Volt)</td><td><%- product.props.vmax %>V</td>
+                            </tr>
+                            <tr>
+                                <td>Isc (A)</td><td><%- product.props.isc %>A</td>
+                            </tr>
+                            <tr>
+                                <td>Imax (A)</td><td><%- product.props.imax %>A</td>
+                            </tr>
+                            <tr>
+                                <td>Cells</td><td><%- product.props.cells %> Cells</td>
+                            </tr>
+                            <tr>
+                                <td>Warranty </td><td><%- product.props.warranty %></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>

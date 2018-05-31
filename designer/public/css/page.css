@@ -265,6 +265,51 @@ and open the template in the editor.
     text-transform: uppercase;
 }
 
+.productImg{
+    border: 1px solid #ccc;
+    padding: 0px 10px 20px 10px;
+    margin-top: 20px;
+}
+
+.producttitle{
+    font-size: 16px;
+    font-weight: bold;
+}
 .productDetail{
+    
+}
+
+.productDetail .actualprice{
+    font-size: 28px;
+    vertical-align: sub;
+    display: inline-block;
+    font-weight: 500;
+    color: #212121;
+}
+.productDetail .mrp{
+    font-size: 16px;
+    margin-left: 12px;
+    vertical-align: middle;
+    color: #878787;
+    text-decoration: line-through;
+    display: inline-block;
+}
+.productDetail .off{
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #388e3c;
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: -0.2px;
+}
+ 
+
+.specs{
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.specs table{
     
 }

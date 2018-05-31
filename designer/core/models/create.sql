@@ -59,6 +59,7 @@ CREATE TABLE panels (
     isc             float,
     imax            float,
     cells           float,
+    warranty        varchar(100),
     price           integer,
     tax             integer,
     maxdiscount     integer,
@@ -66,9 +67,10 @@ CREATE TABLE panels (
     maxsysv         integer
 );
 
-CREATE VIEW products AS
+CREATE OR REPLACE VIEW products AS
     SELECT 'panel'  as type, id ,name, brand , price, maxdiscount, tax, 
-        '{ "power" : ' || power || ' , "voc" : ' || voc || ', "isc" : ' || isc || ' } '  as props FROM panels
+        '{ "power" : ' || power || ' , "voc" : ' || voc || ', "isc" : ' || isc ||
+         ', "vmax" : ' || vmax  || ', "imax" : ' || imax || ', "warranty" : "' || warranty || '" } '  as props FROM panels
     UNION
     SELECT 'battery'  as type, id , name, brand , price, maxdiscount, tax, 
         '{ "ah" : ' || ah || ' , "v" : ' || v || ' } '  as props FROM batteries

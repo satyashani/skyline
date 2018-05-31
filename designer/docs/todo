@@ -1,0 +1,13 @@
+1. add cart
+    a. session cart, client side, server side
+    b. cart page
+2. add product templates
+3. add users, roles, login
+4. add gallery
+5. documents section, like posts
+6. order page
+    a. order table, stocks table
+    b. order status
+    c. order tracking
+    d. invoice
+    e. customer records
